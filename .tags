@@ -1,0 +1,8 @@
+ButtonAppBar	/Users/dissonants/Documents/Git/precision-wiki/src/components/functionals/ButtonAppBar.js	/^function ButtonAppBar(props) {$/;"	function	line:14
+ButtonAppBar	/Users/dissonants/Documents/Git/precision-wiki/src/components/functionals/ButtonAppBar.js	/^function ButtonAppBar(props) {$/;"	function	line:14
+class.showMenu	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/MenuProvider.js	/^  state = {$/;"	property	line:6
+class.toggleMenu	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/MenuProvider.js	/^    showMenu: false,$/;"	property	line:7
+render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/MenuProvider.js	/^  render() {$/;"	function	line:14
+NestedList	/Users/dissonants/Documents/Git/precision-wiki/src/components/functionals/Drawer.js	/^function NestedList(props) {$/;"	function	line:18
+NestedList	/Users/dissonants/Documents/Git/precision-wiki/src/components/functionals/Drawer.js	/^function NestedList(props) {$/;"	function	line:18
+NestedList.propTypes.classes	/Users/dissonants/Documents/Git/precision-wiki/src/components/functionals/Drawer.js	/^NestedList.propTypes = {$/;"	property	line:45
