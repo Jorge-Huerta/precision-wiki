@@ -4,6 +4,3 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-NestedList	/Users/dissonants/Documents/Git/precision-wiki/src/components/functionals/Drawer.js	/^function NestedList(props) {$/;"	function	line:18
-NestedList	/Users/dissonants/Documents/Git/precision-wiki/src/components/functionals/Drawer.js	/^function NestedList(props) {$/;"	function	line:18
-NestedList.propTypes.classes	/Users/dissonants/Documents/Git/precision-wiki/src/components/functionals/Drawer.js	/^NestedList.propTypes = {$/;"	property	line:45

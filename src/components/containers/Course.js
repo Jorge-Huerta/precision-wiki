@@ -3,7 +3,7 @@ import AppBar from "../functionals/ButtonAppBar";
 
 class Course extends Component {
   render() {
-    return <AppBar />;
+    return <h1>hola</h1>;
   }
 }
 

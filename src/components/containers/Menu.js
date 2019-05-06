@@ -1,9 +1,9 @@
 import React, {Component} from "react";
 import AppBar from "../functionals/ButtonAppBar";
-import Drawer from "../functionals/Drawer";
+import Drawer from "../functionals/PersistentDrawer";
 import MenuProvider from "./MenuProvider";
 
-class Home extends Component {
+class Menu extends Component {
   render() {
     return (
       <MenuProvider>
@@ -14,4 +14,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default Menu;
