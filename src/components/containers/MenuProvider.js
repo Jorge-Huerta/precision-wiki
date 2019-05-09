@@ -7,7 +7,6 @@ class MenuProvider extends Component {
     showMenu: false,
     toggleMenu: () => {
       this.setState(prevState => ({showMenu: !prevState.showMenu}));
-      console.log("click");
     }
   };
 

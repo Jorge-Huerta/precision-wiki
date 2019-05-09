@@ -1,9 +1,9 @@
 import React, {Component} from "react";
-import SimpleCard from "./SimpleCard";
 import Grid from "@material-ui/core/Grid";
-import UploadButton from "./UploadButton";
+import AuthForm from "./AuthForm";
+import AuthCard from "./AuthCard";
 
-class Upload extends Component {
+class Auth extends Component {
   render() {
     return (
       <Grid
@@ -14,13 +14,13 @@ class Upload extends Component {
         justify="center"
       >
         <Grid item xs={3}>
-          <SimpleCard>
-            <UploadButton />
-          </SimpleCard>
+          <AuthCard>
+            <AuthForm />
+          </AuthCard>
         </Grid>
       </Grid>
     );
   }
 }
 
-export default Upload;
+export default Auth;
