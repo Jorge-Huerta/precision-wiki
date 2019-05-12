@@ -1,7 +1,10 @@
 import React, {Component} from "react";
-import AppBar from "../functionals/ButtonAppBar";
 
 class Course extends Component {
+  state = {
+    id: ""
+  };
+
   render() {
     return <h1>Course</h1>;
   }

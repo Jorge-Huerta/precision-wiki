@@ -71,7 +71,7 @@ class AuthForm extends React.Component {
         />
 
         <TextField
-          label="Password"
+          label="Contraseña"
           type="password"
           className={classes.textField}
           value={password.value}

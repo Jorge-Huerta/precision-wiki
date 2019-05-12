@@ -12,27 +12,46 @@ NestedList.propTypes.classes	/Users/dissonants/Documents/Git/precision-wiki/src/
 class.Component.mobileOpen	/Users/dissonants/Documents/Git/precision-wiki/src/components/functionals/ResponsiveDrawer.js	/^  state = {$/;"	property	line:22
 render	/Users/dissonants/Documents/Git/precision-wiki/src/components/functionals/ResponsiveDrawer.js	/^  render() {$/;"	function	line:30
 ResponsiveDrawer.propTypes.classes	/Users/dissonants/Documents/Git/precision-wiki/src/components/functionals/ResponsiveDrawer.js	/^ResponsiveDrawer.propTypes = {$/;"	property	line:135
-render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/Menu.js	/^  render() {$/;"	function	line:7
-ButtonAppBar	/Users/dissonants/Documents/Git/precision-wiki/src/components/functionals/ButtonAppBar.js	/^function ButtonAppBar(props) {$/;"	function	line:12
-ButtonAppBar	/Users/dissonants/Documents/Git/precision-wiki/src/components/functionals/ButtonAppBar.js	/^function ButtonAppBar(props) {$/;"	function	line:12
 render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/Course.js	/^  render() {$/;"	function	line:5
 class.showMenu	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/MenuProvider.js	/^  state = {$/;"	property	line:6
 class.toggleMenu	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/MenuProvider.js	/^    showMenu: false,$/;"	property	line:7
 render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/MenuProvider.js	/^  render() {$/;"	function	line:13
-render	/Users/dissonants/Documents/Git/precision-wiki/src/App.js	/^  render() {$/;"	function	line:9
 SimpleCard	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/upload/SimpleCard.js	/^function SimpleCard(props) {$/;"	function	line:9
 SimpleCard	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/upload/SimpleCard.js	/^function SimpleCard(props) {$/;"	function	line:9
 SimpleCard.propTypes.classes	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/upload/SimpleCard.js	/^SimpleCard.propTypes = {$/;"	property	line:25
-const.root	/Users/dissonants/Documents/Git/precision-wiki/src/components/functionals/styles/appbar-styles.js	/^const styles = {$/;"	property	line:1
-PersistentDrawerLeft	/Users/dissonants/Documents/Git/precision-wiki/src/components/functionals/PersistentDrawer.js	/^function PersistentDrawerLeft(props) {$/;"	function	line:19
-PersistentDrawerLeft	/Users/dissonants/Documents/Git/precision-wiki/src/components/functionals/PersistentDrawer.js	/^function PersistentDrawerLeft(props) {$/;"	function	line:19
 UploadButton	/Users/dissonants/Documents/Git/precision-wiki/src/components/functionals/UploadButton.js	/^function UploadButton(props) {$/;"	function	line:7
 UploadButton	/Users/dissonants/Documents/Git/precision-wiki/src/components/functionals/UploadButton.js	/^function UploadButton(props) {$/;"	function	line:7
 UploadButton.propTypes.classes	/Users/dissonants/Documents/Git/precision-wiki/src/components/functionals/UploadButton.js	/^UploadButton.propTypes = {$/;"	property	line:36
 const.card	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/upload/styles/simplecard-styles.js	/^const styles = {$/;"	property	line:1
 class.name	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/upload/UploadButton.js	/^  state = {$/;"	property	line:7
 render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/upload/Upload.js	/^  render() {$/;"	function	line:6
+const.card	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/Auth/styles/authcard-styles.js	/^const styles = {$/;"	property	line:1
+ButtonAppBar	/Users/dissonants/Documents/Git/precision-wiki/src/components/functionals/ButtonAppBar.js	/^function ButtonAppBar(props) {$/;"	function	line:15
+ButtonAppBar	/Users/dissonants/Documents/Git/precision-wiki/src/components/functionals/ButtonAppBar.js	/^function ButtonAppBar(props) {$/;"	function	line:15
 class.Component.hola	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/Auth/AuthForm.js	/^  state = {$/;"	property	line:10
 class.Component.controls	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/Auth/AuthForm.js	/^    hola: "",$/;"	property	line:11
 render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/Auth/AuthForm.js	/^  render() {$/;"	function	line:54
-const.card	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/Auth/styles/authcard-styles.js	/^const styles = {$/;"	property	line:1
+render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/upload/Course.js	/^  render() {$/;"	function	line:4
+PersistentDrawerLeft	/Users/dissonants/Documents/Git/precision-wiki/src/components/functionals/PersistentDrawer.js	/^function PersistentDrawerLeft(props) {$/;"	function	line:34
+PersistentDrawerLeft	/Users/dissonants/Documents/Git/precision-wiki/src/components/functionals/PersistentDrawer.js	/^function PersistentDrawerLeft(props) {$/;"	function	line:34
+html	/Users/dissonants/Documents/Git/precision-wiki/public/index.html	/^<html lang="en">$/;"	function	line:2
+head	/Users/dissonants/Documents/Git/precision-wiki/public/index.html	/^  <head>$/;"	function	line:3
+meta	/Users/dissonants/Documents/Git/precision-wiki/public/index.html	/^    <meta charset="utf-8"\/>$/;"	function	line:4
+link	/Users/dissonants/Documents/Git/precision-wiki/public/index.html	/^    <link rel="shortcut icon" href="%PUBLIC_URL%\/favicon.ico"\/>$/;"	function	line:5
+meta	/Users/dissonants/Documents/Git/precision-wiki/public/index.html	/^    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"\/>$/;"	function	line:6
+meta	/Users/dissonants/Documents/Git/precision-wiki/public/index.html	/^    <meta name="theme-color" content="#000000"\/>$/;"	function	line:7
+link	/Users/dissonants/Documents/Git/precision-wiki/public/index.html	/^    <link rel="manifest" href="%PUBLIC_URL%\/manifest.json"\/>$/;"	function	line:9
+title	/Users/dissonants/Documents/Git/precision-wiki/public/index.html	/^    <title>Precisión-wiki<\/title>$/;"	function	line:12
+body	/Users/dissonants/Documents/Git/precision-wiki/public/index.html	/^  <body>$/;"	function	line:14
+noscript	/Users/dissonants/Documents/Git/precision-wiki/public/index.html	/^    <noscript>You need to enable JavaScript to run this app.<\/noscript>$/;"	function	line:15
+div	/Users/dissonants/Documents/Git/precision-wiki/public/index.html	/^    <div id="root"><\/div>$/;"	function	line:16
+render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/Menu.js	/^  render() {$/;"	function	line:7
+render	/Users/dissonants/Documents/Git/precision-wiki/src/components/functionals/layout/Menu.js	/^  render() {$/;"	function	line:7
+render	/Users/dissonants/Documents/Git/precision-wiki/src/App.js	/^  render() {$/;"	function	line:10
+ButtonAppBar	/Users/dissonants/Documents/Git/precision-wiki/src/components/functionals/layout/ButtonAppBar.js	/^function ButtonAppBar(props) {$/;"	function	line:15
+ButtonAppBar	/Users/dissonants/Documents/Git/precision-wiki/src/components/functionals/layout/ButtonAppBar.js	/^function ButtonAppBar(props) {$/;"	function	line:15
+PersistentDrawerLeft	/Users/dissonants/Documents/Git/precision-wiki/src/components/functionals/layout/PersistentDrawer.js	/^function PersistentDrawerLeft(props) {$/;"	function	line:34
+PersistentDrawerLeft	/Users/dissonants/Documents/Git/precision-wiki/src/components/functionals/layout/PersistentDrawer.js	/^function PersistentDrawerLeft(props) {$/;"	function	line:34
+render	/Users/dissonants/Documents/Git/precision-wiki/src/components/functionals/layout/Layout.js	/^  render() {$/;"	function	line:8
+class.id	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/course/Course.js	/^  state = {$/;"	property	line:4
+render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/course/Course.js	/^  render() {$/;"	function	line:8

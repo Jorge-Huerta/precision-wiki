@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import Menu from "./components/containers/Menu";
-import Course from "./components/containers/Course";
+import Layout from "./components/functionals/layout/Layout";
+import Course from "./components/containers/course/Course";
 import Upload from "./components/containers/upload/Upload";
 import Auth from "./components/containers/Auth/Auth"
 import "./App.css";
@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <Menu />
+          <Layout />
             <Switch>
               <Route path="/course" exact component={Course} />
               <Route path="/upload" exact component={Upload} />

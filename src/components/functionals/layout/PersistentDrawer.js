@@ -13,8 +13,23 @@ import ListItemText from "@material-ui/core/ListItemText";
 import AccountBoxIcon from "@material-ui/icons/AccountBox";
 import DescriptionIcon from "@material-ui/icons/Description";
 import styles from "./styles/persistentdrawer-styles";
-import {MenuContext} from "../containers/MenuProvider";
+import {MenuContext} from "../../containers/layout/MenuProvider";
 import {Link} from "react-router-dom";
+import shortid from "shortid";
+
+const getCourses = (props) => {
+  const courses = props;
+  courses.map(course => {
+    return (
+      <ListItem button component={Link} to="/course" key="shortid.generate()">
+        <ListItemIcon>
+          <DescriptionIcon />
+        </ListItemIcon>
+        <ListItemText inset primary="props.name" />
+      </ListItem>
+    )
+  })
+}
 
 function PersistentDrawerLeft(props) {
   const menuContext = useContext(MenuContext);
