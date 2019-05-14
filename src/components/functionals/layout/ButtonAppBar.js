@@ -7,12 +7,12 @@ import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import SearchIcon from "@material-ui/icons/Search";
-import {MenuContext} from "../../containers/layout/MenuProvider";
+import MenuContext from "../../context/menu-context";
 import styles from "./styles/appbar-styles";
 import {Link} from "react-router-dom";
 import InputBase from '@material-ui/core/InputBase';
 
-function ButtonAppBar(props) {
+const ButtonAppBar = (props) => {
   const {classes} = props;
   const menuContext = useContext(MenuContext);
 

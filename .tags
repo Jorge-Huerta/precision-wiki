@@ -47,11 +47,14 @@ noscript	/Users/dissonants/Documents/Git/precision-wiki/public/index.html	/^    
 div	/Users/dissonants/Documents/Git/precision-wiki/public/index.html	/^    <div id="root"><\/div>$/;"	function	line:16
 render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/Menu.js	/^  render() {$/;"	function	line:7
 render	/Users/dissonants/Documents/Git/precision-wiki/src/components/functionals/layout/Menu.js	/^  render() {$/;"	function	line:7
-render	/Users/dissonants/Documents/Git/precision-wiki/src/App.js	/^  render() {$/;"	function	line:10
-ButtonAppBar	/Users/dissonants/Documents/Git/precision-wiki/src/components/functionals/layout/ButtonAppBar.js	/^function ButtonAppBar(props) {$/;"	function	line:15
-ButtonAppBar	/Users/dissonants/Documents/Git/precision-wiki/src/components/functionals/layout/ButtonAppBar.js	/^function ButtonAppBar(props) {$/;"	function	line:15
-PersistentDrawerLeft	/Users/dissonants/Documents/Git/precision-wiki/src/components/functionals/layout/PersistentDrawer.js	/^function PersistentDrawerLeft(props) {$/;"	function	line:34
-PersistentDrawerLeft	/Users/dissonants/Documents/Git/precision-wiki/src/components/functionals/layout/PersistentDrawer.js	/^function PersistentDrawerLeft(props) {$/;"	function	line:34
 render	/Users/dissonants/Documents/Git/precision-wiki/src/components/functionals/layout/Layout.js	/^  render() {$/;"	function	line:8
-class.id	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/course/Course.js	/^  state = {$/;"	property	line:4
-render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/course/Course.js	/^  render() {$/;"	function	line:8
+const.card	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/course/styles/courcard-styles.js	/^const styles = {$/;"	property	line:1
+CourseCard	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/course/CourseCard.js	/^function CourseCard(props) {$/;"	function	line:9
+CourseCard	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/course/CourseCard.js	/^function CourseCard(props) {$/;"	function	line:9
+CourseCard.propTypes.classes	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/course/CourseCard.js	/^CourseCard.propTypes = {$/;"	property	line:22
+class.showMenu	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/layout/MenuProvider.js	/^  state = {$/;"	property	line:5
+class.showNested	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/layout/MenuProvider.js	/^    showMenu: false,$/;"	property	line:6
+class.toggleMenu	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/layout/MenuProvider.js	/^    showNested: true,$/;"	property	line:7
+render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/layout/MenuProvider.js	/^  render() {$/;"	function	line:16
+render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/course/Course.js	/^  render() {$/;"	function	line:6
+render	/Users/dissonants/Documents/Git/precision-wiki/src/App.js	/^  render() {$/;"	function	line:33

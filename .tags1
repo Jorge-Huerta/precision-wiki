@@ -4,5 +4,3 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-class.id	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/course/Course.js	/^  state = {$/;"	property	line:4
-render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/course/Course.js	/^  render() {$/;"	function	line:8
