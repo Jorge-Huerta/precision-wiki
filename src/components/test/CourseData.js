@@ -3,7 +3,7 @@ let components = [
     title: "Álgebra",
     description: "Curso de algebra",
     route: "/algebra",
-    topics: "topic"
+    topics: "topic",
   },
   {
     title: "Cálculo",

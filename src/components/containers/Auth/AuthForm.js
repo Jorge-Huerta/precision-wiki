@@ -82,7 +82,7 @@ class AuthForm extends React.Component {
           InputLabelProps={{shrink: true}}
         />
         <Button variant="contained" color="primary" className={classes.button}>
-          Primary
+          Ingresar
         </Button>
       </form>
     );
