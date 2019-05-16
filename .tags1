@@ -8,4 +8,4 @@ getModalStyle	/Users/dissonants/Documents/Git/precision-wiki/src/components/cont
 getModalStyle	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/course/CourseModal.js	/^function getModalStyle() {$/;"	function	line:10
 class.Component.open	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/course/CourseModal.js	/^  state = {$/;"	property	line:22
 render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/course/CourseModal.js	/^  render() {$/;"	function	line:34
-SimpleModal.propTypes.classes	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/course/CourseModal.js	/^SimpleModal.propTypes = {$/;"	property	line:58
+SimpleModal.propTypes.classes	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/course/CourseModal.js	/^SimpleModal.propTypes = {$/;"	property	line:62

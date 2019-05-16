@@ -4,7 +4,7 @@ import {withStyles} from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Modal from "@material-ui/core/Modal";
 import Button from "@material-ui/core/Button";
-import ReactPlayer from 'react-player'
+import ReactPlayer from "react-player";
 import styles from "./styles/coursemodal-styles";
 
 function getModalStyle() {
@@ -45,7 +45,11 @@ class SimpleModal extends React.Component {
         >
           <div style={getModalStyle()} className={classes.paper}>
             <Typography variant="h6" id="modal-title">
-              <ReactPlayer controls="true "url='https://youtu.be/4mx-H3aKJvM' playing />
+              <ReactPlayer
+                controls="true"
+                url={`${this.props.link}`}
+                playing
+              />
             </Typography>
             <SimpleModalWrapped />
           </div>
