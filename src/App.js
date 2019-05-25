@@ -1,12 +1,19 @@
 import React, {Component} from "react";
+
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+
 import Layout from "./components/functionals/layout/Layout";
 import Course from "./components/containers/course/Course";
 import Upload from "./components/containers/upload/Upload";
+import Create from "./components/containers/admin/create/Create";
+import Update from "./components/containers/admin/update/Update";
+import Delete from "./components/containers/admin/delete/Delete";
 import Auth from "./components/containers/Auth/Auth";
-import "./App.css";
 import CourseData from "./components/test/CourseData";
+
 import shortid from "shortid";
+
+import axios from "axios";
 
 const dynamicRouting = courses => {
   return courses.map(course => {
@@ -37,6 +44,9 @@ class App extends Component {
         <div>
           <Layout />
           <Switch>
+            <Route path="/create" exact component={Create} />
+            <Route path="/update" exact component={Update} />
+            <Route path="/delete" exact component={Delete} />
             <Route path="/upload" exact component={Upload} />
             <Route path="/auth" exact component={Auth} />
             {dynamicRouting(CourseData)}

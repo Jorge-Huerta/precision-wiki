@@ -57,9 +57,18 @@ class.Component.hola	/Users/dissonants/Documents/Git/precision-wiki/src/componen
 class.Component.controls	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/Auth/AuthForm.js	/^    hola: "",$/;"	property	line:11
 render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/Auth/AuthForm.js	/^  render() {$/;"	function	line:54
 render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/course/Course.js	/^  render() {$/;"	function	line:11
-render	/Users/dissonants/Documents/Git/precision-wiki/src/App.js	/^  render() {$/;"	function	line:34
 getModalStyle	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/course/CourseModal.js	/^function getModalStyle() {$/;"	function	line:10
 getModalStyle	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/course/CourseModal.js	/^function getModalStyle() {$/;"	function	line:10
 class.Component.open	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/course/CourseModal.js	/^  state = {$/;"	property	line:22
 render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/course/CourseModal.js	/^  render() {$/;"	function	line:34
 SimpleModal.propTypes.classes	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/course/CourseModal.js	/^SimpleModal.propTypes = {$/;"	property	line:62
+render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/update/Update.js	/^  render() {$/;"	function	line:4
+render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/delete/Delete.js	/^  render() {$/;"	function	line:5
+CourseCard	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/create/CreateCard.js	/^function CourseCard(props) {$/;"	function	line:9
+CourseCard	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/create/CreateCard.js	/^function CourseCard(props) {$/;"	function	line:9
+CourseCard.propTypes.classes	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/create/CreateCard.js	/^CourseCard.propTypes = {$/;"	property	line:22
+render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/create/Create.js	/^  render() {$/;"	function	line:9
+render	/Users/dissonants/Documents/Git/precision-wiki/src/App.js	/^  render() {$/;"	function	line:41
+class.Component.controls	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/create/CreateForm.js	/^  state = {$/;"	property	line:14
+componentDidMount	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/create/CreateForm.js	/^  componentDidMount() {$/;"	function	line:47
+render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/create/CreateForm.js	/^  render() {$/;"	function	line:60
