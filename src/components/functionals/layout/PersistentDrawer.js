@@ -1,4 +1,10 @@
-import React, {useContext} from "react";
+import React, {useState, useEffect, useContext} from "react";
+
+import {Link} from "react-router-dom";
+
+import axios from "axios";
+import shortid from "shortid";
+
 import classNames from "classnames";
 import {withStyles} from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
@@ -21,13 +27,12 @@ import NoteAddIcon from "@material-ui/icons/NoteAdd";
 import UpdateIcon from "@material-ui/icons/Update";
 import DeleteIcon from "@material-ui/icons/Delete";
 import styles from "./styles/persistentdrawer-styles";
+
 import MenuContext from "../../context/menu-context";
-import {Link} from "react-router-dom";
-import shortid from "shortid";
-import CourseData from "../../test/CourseData";
 
 const getCourses = (courses, classes) => {
   return courses.map(course => {
+    console.log(course);
     return (
       <ListItem
         key={shortid.generate()}
@@ -36,6 +41,7 @@ const getCourses = (courses, classes) => {
         component={Link}
         to={`${course.route}`}
       >
+        º
         <ListItemIcon>
           <DescriptionIcon />
         </ListItemIcon>
@@ -46,8 +52,22 @@ const getCourses = (courses, classes) => {
 };
 
 const PersistentDrawerLeft = props => {
+  const [data, setData] = useState([]);
   const menuContext = useContext(MenuContext);
   const {classes, theme} = props;
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios
+        .get(
+          "https://my-json-server.typicode.com/dissonants/precisiondb/courses"
+        )
+        .then(result => setData(result.data));
+    };
+    fetchData();
+  }, []);
+
+  console.log(data);
 
   return (
     <div className={classes.root}>
@@ -117,7 +137,7 @@ const PersistentDrawerLeft = props => {
         </ListItem>
         <Collapse in={menuContext.showNested} timeout="auto" unmountOnExit>
           <List component="div" disablePadding>
-            {getCourses(CourseData, classes)}
+            {getCourses(data, classes)}
           </List>
         </Collapse>
       </Drawer>

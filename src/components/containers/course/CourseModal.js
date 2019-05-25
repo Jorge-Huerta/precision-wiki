@@ -46,7 +46,7 @@ class SimpleModal extends React.Component {
           <div style={getModalStyle()} className={classes.paper}>
             <Typography variant="h6" id="modal-title">
               <ReactPlayer
-                controls="true"
+                controls={true}
                 url={`${this.props.link}`}
                 playing
               />

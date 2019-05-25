@@ -67,12 +67,12 @@ class CreateForm extends React.Component {
       <form className={classes.container} noValidate autoComplete="off">
         <Grid
           container
-          spacing={12}
+          spacing={8}
           direction="row"
           alignItems="center"
           justify="center"
         >
-          <Grid item xs={6} direction="col">
+          <Grid item xs={6} direction="column">
             <TextField
               label="Nombre"
               type="text"
@@ -84,7 +84,7 @@ class CreateForm extends React.Component {
               InputLabelProps={{shrink: true}}
             />
           </Grid>
-          <Grid item xs={6} direction="col">
+          <Grid item xs={6} direction="column">
             <TextField
               label="Descripción"
               type="text"

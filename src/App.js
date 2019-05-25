@@ -9,7 +9,6 @@ import Create from "./components/containers/admin/create/Create";
 import Update from "./components/containers/admin/update/Update";
 import Delete from "./components/containers/admin/delete/Delete";
 import Auth from "./components/containers/Auth/Auth";
-import CourseData from "./components/test/CourseData";
 
 import shortid from "shortid";
 
@@ -38,7 +37,21 @@ const dynamicRouting = courses => {
 };
 
 class App extends Component {
+  state = {
+    posts: []
+  };
+
+  componentDidMount() {
+    axios
+      .get("https://my-json-server.typicode.com/dissonants/precisiondb/courses")
+      .then(response => {
+        this.setState({posts: response.data});
+      });
+  }
+
   render() {
+    const posts = dynamicRouting(this.state.posts);
+
     return (
       <Router>
         <div>
@@ -49,7 +62,7 @@ class App extends Component {
             <Route path="/delete" exact component={Delete} />
             <Route path="/upload" exact component={Upload} />
             <Route path="/auth" exact component={Auth} />
-            {dynamicRouting(CourseData)}
+            {posts}
           </Switch>
         </div>
       </Router>
