@@ -1,7 +1,8 @@
 const styles = theme => ({
   container: {
     display: "inline-block",
-    flexWrap: "wrap"
+    flexWrap: "wrap",
+    direction: "row"
   },
   textField: {
     marginLeft: theme.spacing.unit,

@@ -2,7 +2,7 @@ import React, {useState, useEffect, useContext} from "react";
 
 import {Link} from "react-router-dom";
 
-import axios from "axios";
+import API from "../../API/api";
 import shortid from "shortid";
 
 import classNames from "classnames";
@@ -32,7 +32,6 @@ import MenuContext from "../../context/menu-context";
 
 const getCourses = (courses, classes) => {
   return courses.map(course => {
-    console.log(course);
     return (
       <ListItem
         key={shortid.generate()}
@@ -58,16 +57,12 @@ const PersistentDrawerLeft = props => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios
-        .get(
-          "https://my-json-server.typicode.com/dissonants/precisiondb/courses"
-        )
-        .then(result => setData(result.data));
+      const result = await API.get("/courses").then(result =>
+        setData(result.data)
+      );
     };
     fetchData();
   }, []);
-
-  console.log(data);
 
   return (
     <div className={classes.root}>

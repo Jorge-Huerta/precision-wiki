@@ -1,104 +1,93 @@
-import React from "react";
+import React, {Component} from "react";
 
-import classNames from "classnames";
+import API from "../../../API/api";
+import shortid from "shortid";
+
 import {withStyles} from "@material-ui/core/styles";
-import MenuItem from "@material-ui/core/MenuItem";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import styles from "./styles/createform-styles";
 import Grid from "@material-ui/core/Grid";
 
-import axios from "axios";
-
-class CreateForm extends React.Component {
+class CreateForm extends Component {
   state = {
-    controls: {
-      courseName: {
-        elementType: "input",
-        elementConfig: {
-          type: "text",
-          placeholder: "Nombre"
-        },
-        value: "",
-        validation: {
-          required: true,
-          isEmail: true
-        },
-        valid: false,
-        touched: false
-      },
-      description: {
-        elementType: "input",
-        elementConfig: {
-          type: "text",
-          placeholder: "Descripción"
-        },
-        value: "",
-        validation: {
-          required: true,
-          minLength: 8
-        },
-        valid: false,
-        touched: false
-      }
-    }
+    title: "",
+    description: ""
   };
-
-  componentDidMount() {
-    axios.get('https://my-json-server.typicode.com/dissonants/precisiondb/posts')
-  }
 
   handleChange = name => ({target: {value}}) => {
     this.setState({
-      controls: {
-        ...this.state.controls,
-        [name]: value
-      }
+      [name]: value
+    });
+    console.log(this.state.title, this.state.description);
+  };
+
+  handleSubmit = event => {
+    event.preventDefault();
+    const formatedRoute = this.state.title
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
+
+    const course = {
+      id: shortid.generate(),
+      title: this.state.title,
+      description: this.state.description,
+      route: `/${formatedRoute}`,
+      topics: "Átomo",
+      link: "hola"
+    };
+
+    API.post("/courses", {
+      course
+    }).then(res => {
+      console.log(res);
+      console.log(res.data);
     });
   };
 
   render() {
     const {classes} = this.props;
-    const {
-      controls: {courseName, description}
-    } = this.state;
 
     return (
-      <form className={classes.container} noValidate autoComplete="off">
-        <Grid
-          container
-          spacing={8}
-          direction="row"
-          alignItems="center"
-          justify="center"
-        >
-          <Grid item xs={6} direction="column">
+      <form
+        onSubmit={this.handleSubmit}
+        className={classes.container}
+        noValidate
+        autoComplete="off"
+      >
+        <Grid container spacing={8} alignItems="center" justify="center">
+          <Grid item xs={6}>
             <TextField
               label="Nombre"
-              type="text"
               className={classes.textField}
-              value={courseName.value}
-              onChange={this.handleChange("courseName")}
+              value={this.state.title}
+              onChange={this.handleChange("title")}
               margin="normal"
               variant="outlined"
               InputLabelProps={{shrink: true}}
             />
           </Grid>
-          <Grid item xs={6} direction="column">
+          <Grid item xs={6}>
             <TextField
+              multiline
+              rows="5"
               label="Descripción"
-              type="text"
               className={classes.textField}
-              value={description.value}
+              value={this.state.description}
               onChange={this.handleChange("description")}
-              autoComplete="current-password"
               margin="normal"
               variant="outlined"
               InputLabelProps={{shrink: true}}
             />
           </Grid>
         </Grid>
-        <Button variant="contained" color="primary" className={classes.button}>
+        <Button
+          type="submit"
+          variant="contained"
+          color="primary"
+          className={classes.button}
+        >
           Agregar
         </Button>
       </form>

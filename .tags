@@ -31,17 +31,6 @@ ButtonAppBar	/Users/dissonants/Documents/Git/precision-wiki/src/components/funct
 render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/upload/Course.js	/^  render() {$/;"	function	line:4
 PersistentDrawerLeft	/Users/dissonants/Documents/Git/precision-wiki/src/components/functionals/PersistentDrawer.js	/^function PersistentDrawerLeft(props) {$/;"	function	line:34
 PersistentDrawerLeft	/Users/dissonants/Documents/Git/precision-wiki/src/components/functionals/PersistentDrawer.js	/^function PersistentDrawerLeft(props) {$/;"	function	line:34
-html	/Users/dissonants/Documents/Git/precision-wiki/public/index.html	/^<html lang="en">$/;"	function	line:2
-head	/Users/dissonants/Documents/Git/precision-wiki/public/index.html	/^  <head>$/;"	function	line:3
-meta	/Users/dissonants/Documents/Git/precision-wiki/public/index.html	/^    <meta charset="utf-8"\/>$/;"	function	line:4
-link	/Users/dissonants/Documents/Git/precision-wiki/public/index.html	/^    <link rel="shortcut icon" href="%PUBLIC_URL%\/favicon.ico"\/>$/;"	function	line:5
-meta	/Users/dissonants/Documents/Git/precision-wiki/public/index.html	/^    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"\/>$/;"	function	line:6
-meta	/Users/dissonants/Documents/Git/precision-wiki/public/index.html	/^    <meta name="theme-color" content="#000000"\/>$/;"	function	line:7
-link	/Users/dissonants/Documents/Git/precision-wiki/public/index.html	/^    <link rel="manifest" href="%PUBLIC_URL%\/manifest.json"\/>$/;"	function	line:9
-title	/Users/dissonants/Documents/Git/precision-wiki/public/index.html	/^    <title>Precisión-wiki<\/title>$/;"	function	line:12
-body	/Users/dissonants/Documents/Git/precision-wiki/public/index.html	/^  <body>$/;"	function	line:14
-noscript	/Users/dissonants/Documents/Git/precision-wiki/public/index.html	/^    <noscript>You need to enable JavaScript to run this app.<\/noscript>$/;"	function	line:15
-div	/Users/dissonants/Documents/Git/precision-wiki/public/index.html	/^    <div id="root"><\/div>$/;"	function	line:16
 render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/Menu.js	/^  render() {$/;"	function	line:7
 render	/Users/dissonants/Documents/Git/precision-wiki/src/components/functionals/layout/Menu.js	/^  render() {$/;"	function	line:7
 render	/Users/dissonants/Documents/Git/precision-wiki/src/components/functionals/layout/Layout.js	/^  render() {$/;"	function	line:8
@@ -53,22 +42,42 @@ class.showMenu	/Users/dissonants/Documents/Git/precision-wiki/src/components/con
 class.showNested	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/layout/MenuProvider.js	/^    showMenu: false,$/;"	property	line:6
 class.toggleMenu	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/layout/MenuProvider.js	/^    showNested: true,$/;"	property	line:7
 render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/layout/MenuProvider.js	/^  render() {$/;"	function	line:16
-class.Component.hola	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/Auth/AuthForm.js	/^  state = {$/;"	property	line:10
-class.Component.controls	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/Auth/AuthForm.js	/^    hola: "",$/;"	property	line:11
-render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/Auth/AuthForm.js	/^  render() {$/;"	function	line:54
 render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/course/Course.js	/^  render() {$/;"	function	line:11
 getModalStyle	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/course/CourseModal.js	/^function getModalStyle() {$/;"	function	line:10
 getModalStyle	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/course/CourseModal.js	/^function getModalStyle() {$/;"	function	line:10
 class.Component.open	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/course/CourseModal.js	/^  state = {$/;"	property	line:22
 render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/course/CourseModal.js	/^  render() {$/;"	function	line:34
 SimpleModal.propTypes.classes	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/course/CourseModal.js	/^SimpleModal.propTypes = {$/;"	property	line:62
-render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/update/Update.js	/^  render() {$/;"	function	line:4
 render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/delete/Delete.js	/^  render() {$/;"	function	line:5
 CourseCard	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/create/CreateCard.js	/^function CourseCard(props) {$/;"	function	line:9
 CourseCard	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/create/CreateCard.js	/^function CourseCard(props) {$/;"	function	line:9
 CourseCard.propTypes.classes	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/create/CreateCard.js	/^CourseCard.propTypes = {$/;"	property	line:22
 render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/create/Create.js	/^  render() {$/;"	function	line:9
-render	/Users/dissonants/Documents/Git/precision-wiki/src/App.js	/^  render() {$/;"	function	line:41
-class.Component.controls	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/create/CreateForm.js	/^  state = {$/;"	property	line:14
-componentDidMount	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/create/CreateForm.js	/^  componentDidMount() {$/;"	function	line:47
-render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/create/CreateForm.js	/^  render() {$/;"	function	line:60
+class.Component.hola	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/Auth/AuthForm.js	/^  state = {$/;"	property	line:8
+class.Component.controls	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/Auth/AuthForm.js	/^    hola: "",$/;"	property	line:9
+render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/Auth/AuthForm.js	/^  render() {$/;"	function	line:51
+class.courses	/Users/dissonants/Documents/Git/precision-wiki/src/App.js	/^  state = {$/;"	property	line:42
+componentDidMount	/Users/dissonants/Documents/Git/precision-wiki/src/App.js	/^  componentDidMount() {$/;"	function	line:46
+render	/Users/dissonants/Documents/Git/precision-wiki/src/App.js	/^  render() {$/;"	function	line:52
+class.title	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/create/CreateForm.js	/^  state = {$/;"	property	line:13
+class.description	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/create/CreateForm.js	/^    title: "",$/;"	property	line:14
+const.id	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/create/CreateForm.js	/^    const course = {$/;"	property	line:32
+render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/create/CreateForm.js	/^  render() {$/;"	function	line:49
+render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/update/EditableCell.js	/^  render() {$/;"	function	line:2
+onDelEvent	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/update/CourseRow.js	/^  onDelEvent() {$/;"	function	line:2
+render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/update/CourseRow.js	/^  render() {$/;"	function	line:5
+render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/update/CourseTable.js	/^  render() {$/;"	function	line:4
+MaterialTableDemo	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/update/MaterialTable.js	/^export default function MaterialTableDemo() {$/;"	function	line:4
+render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/update/Update.js	/^  render() {$/;"	function	line:5
+html	/Users/dissonants/Documents/Git/precision-wiki/public/index.html	/^<html lang="en">$/;"	function	line:2
+head	/Users/dissonants/Documents/Git/precision-wiki/public/index.html	/^  <head>$/;"	function	line:3
+link	/Users/dissonants/Documents/Git/precision-wiki/public/index.html	/^    <link rel="stylesheet" href="https:\/\/fonts.googleapis.com\/icon?family=Material+Icons">$/;"	function	line:4
+meta	/Users/dissonants/Documents/Git/precision-wiki/public/index.html	/^    <meta charset="utf-8"\/>$/;"	function	line:5
+link	/Users/dissonants/Documents/Git/precision-wiki/public/index.html	/^    <link rel="shortcut icon" href="%PUBLIC_URL%\/favicon.ico"\/>$/;"	function	line:6
+meta	/Users/dissonants/Documents/Git/precision-wiki/public/index.html	/^    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"\/>$/;"	function	line:7
+meta	/Users/dissonants/Documents/Git/precision-wiki/public/index.html	/^    <meta name="theme-color" content="#000000"\/>$/;"	function	line:8
+link	/Users/dissonants/Documents/Git/precision-wiki/public/index.html	/^    <link rel="manifest" href="%PUBLIC_URL%\/manifest.json"\/>$/;"	function	line:10
+title	/Users/dissonants/Documents/Git/precision-wiki/public/index.html	/^    <title>Precisión-wiki<\/title>$/;"	function	line:13
+body	/Users/dissonants/Documents/Git/precision-wiki/public/index.html	/^  <body>$/;"	function	line:15
+noscript	/Users/dissonants/Documents/Git/precision-wiki/public/index.html	/^    <noscript>You need to enable JavaScript to run this app.<\/noscript>$/;"	function	line:16
+div	/Users/dissonants/Documents/Git/precision-wiki/public/index.html	/^    <div id="root"><\/div>$/;"	function	line:17

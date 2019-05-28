@@ -1,9 +1,7 @@
 import React, {Component} from "react";
 import CourseCard from "./CourseCard";
-import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import Modal from "./CourseModal";
-import Typography from "@material-ui/core/Typography";
 import {withStyles} from "@material-ui/core/styles";
 import styles from "./styles/grid-styles";
 

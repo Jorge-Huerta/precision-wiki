@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import API from "./components/API/api";
 
 import Layout from "./components/functionals/layout/Layout";
 import Course from "./components/containers/course/Course";
@@ -11,8 +12,6 @@ import Delete from "./components/containers/admin/delete/Delete";
 import Auth from "./components/containers/Auth/Auth";
 
 import shortid from "shortid";
-
-import axios from "axios";
 
 const dynamicRouting = courses => {
   return courses.map(course => {
@@ -27,7 +26,10 @@ const dynamicRouting = courses => {
               title={course.title}
               description={course.description}
               topics={course.topics}
-              link={course.link}
+              link={course.link
+                .toLowerCase()
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "")}
             />
           </div>
         )}
@@ -38,19 +40,17 @@ const dynamicRouting = courses => {
 
 class App extends Component {
   state = {
-    posts: []
+    courses: []
   };
 
   componentDidMount() {
-    axios
-      .get("https://my-json-server.typicode.com/dissonants/precisiondb/courses")
-      .then(response => {
-        this.setState({posts: response.data});
-      });
+    API.get("/courses").then(response => {
+      this.setState({courses: response.data});
+    });
   }
 
   render() {
-    const posts = dynamicRouting(this.state.posts);
+    const courses = dynamicRouting(this.state.courses);
 
     return (
       <Router>
@@ -62,7 +62,7 @@ class App extends Component {
             <Route path="/delete" exact component={Delete} />
             <Route path="/upload" exact component={Upload} />
             <Route path="/auth" exact component={Auth} />
-            {posts}
+            {courses}
           </Switch>
         </div>
       </Router>
