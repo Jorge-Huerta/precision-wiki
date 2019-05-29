@@ -25,11 +25,6 @@ const dynamicRouting = courses => {
               {...routerProps}
               title={course.title}
               description={course.description}
-              topics={course.topics}
-              link={course.link
-                .toLowerCase()
-                .normalize("NFD")
-                .replace(/[\u0300-\u036f]/g, "")}
             />
           </div>
         )}

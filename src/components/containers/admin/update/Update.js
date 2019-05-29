@@ -1,9 +1,10 @@
 import React, {Component} from "react";
-import UpdateTable from "./UpdateTable";
+import Table from "./Table";
+import Tab from "./Example";
 
 class Update extends Component {
   render() {
-    return <UpdateTable />;
+    return <Table />;
   }
 }
 

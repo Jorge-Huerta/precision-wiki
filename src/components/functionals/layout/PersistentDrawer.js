@@ -40,7 +40,6 @@ const getCourses = (courses, classes) => {
         component={Link}
         to={`${course.route}`}
       >
-        º
         <ListItemIcon>
           <DescriptionIcon />
         </ListItemIcon>

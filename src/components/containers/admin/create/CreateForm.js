@@ -24,18 +24,17 @@ class CreateForm extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
+
     const formatedRoute = this.state.title
+      .trimRight()
       .toLowerCase()
       .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "");
+      .replace("/[^a-zA-Z0-9-_.]/", "");
 
     const course = {
-      id: shortid.generate(),
       title: this.state.title,
       description: this.state.description,
-      route: `/${formatedRoute}`,
-      topics: "Átomo",
-      link: "hola"
+      route: `/${formatedRoute}`
     };
 
     API.post("/courses", {

@@ -3,6 +3,26 @@ import API from "../../../API/api";
 
 import MaterialTable from "material-table";
 
+const handleAdd = event => {
+  const formatedRoute = event.title
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+
+  const course = {
+    title: event.title,
+    description: event.description,
+    route: `/${formatedRoute}`
+  };
+
+  API.post("/courses", {
+    course
+  }).then(res => {
+    console.log(res);
+    console.log(res.data);
+  });
+};
+
 const UpdateTable = props => {
   const [state, setState] = React.useState({
     columns: [
@@ -27,15 +47,15 @@ const UpdateTable = props => {
       columns={state.columns}
       data={data}
       editable={{
-        onRowAdd: newData =>
+        onRowAdd: newData => {
           new Promise(resolve => {
-            setTimeout(() => {
-              resolve();
-              const data = [...data];
-              data.push(newData);
-              setState({...state, data});
-            }, 600);
-          }),
+            resolve();
+            const data = [...data];
+            data.push(newData);
+            setState({...state, data});
+            handleAdd(newData);
+          });
+        },
         onRowUpdate: (newData, oldData) =>
           new Promise(resolve => {
             setTimeout(() => {

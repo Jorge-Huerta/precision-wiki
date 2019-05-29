@@ -5,7 +5,6 @@ import CreateForm from "./CreateForm";
 
 class Create extends Component {
   render() {
-
     return (
       <Grid
         container
@@ -16,7 +15,7 @@ class Create extends Component {
       >
         <Grid item xs={3}>
           <CreateCard>
-            <CreateForm />
+            <h1>hola</h1>
           </CreateCard>
         </Grid>
       </Grid>

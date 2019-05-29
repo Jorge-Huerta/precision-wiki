@@ -1,0 +1,43 @@
+{
+  "courses": [
+    {
+      "id": "p7AGSDLux",
+      "title": "Álgebra",
+      "description": "Álgebra",
+      "route": "/algebra"
+    },
+    {
+      "id": "BfJfC9afQ",
+      "title": "Asd",
+      "description": "asd",
+      "route": "/asd"
+    },
+    {
+      "id": "o6oRSQlTx",
+      "title": "Hasd",
+      "description": "asd",
+      "route": "/hasd"
+    },
+    {
+      "id": "G37hCYTFq",
+      "title": "dwd",
+      "description": "adsad",
+      "route": "/dwd"
+    },
+    {
+      "id": "FlXFx2-4i",
+      "title": "sdasd",
+      "description": "asdsad",
+      "route": "/sdasd"
+    },
+    {
+      "id": "cytyU-uMH",
+      "title": "hola",
+      "description": "hola",
+      "route": "/hola",
+      "tableData": {
+        "id": 5
+      }
+    }
+  ]
+}

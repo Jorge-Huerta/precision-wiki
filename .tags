@@ -52,23 +52,14 @@ render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/
 CourseCard	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/create/CreateCard.js	/^function CourseCard(props) {$/;"	function	line:9
 CourseCard	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/create/CreateCard.js	/^function CourseCard(props) {$/;"	function	line:9
 CourseCard.propTypes.classes	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/create/CreateCard.js	/^CourseCard.propTypes = {$/;"	property	line:22
-render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/create/Create.js	/^  render() {$/;"	function	line:9
 class.Component.hola	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/Auth/AuthForm.js	/^  state = {$/;"	property	line:8
 class.Component.controls	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/Auth/AuthForm.js	/^    hola: "",$/;"	property	line:9
 render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/Auth/AuthForm.js	/^  render() {$/;"	function	line:51
-class.courses	/Users/dissonants/Documents/Git/precision-wiki/src/App.js	/^  state = {$/;"	property	line:42
-componentDidMount	/Users/dissonants/Documents/Git/precision-wiki/src/App.js	/^  componentDidMount() {$/;"	function	line:46
-render	/Users/dissonants/Documents/Git/precision-wiki/src/App.js	/^  render() {$/;"	function	line:52
-class.title	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/create/CreateForm.js	/^  state = {$/;"	property	line:13
-class.description	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/create/CreateForm.js	/^    title: "",$/;"	property	line:14
-const.id	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/create/CreateForm.js	/^    const course = {$/;"	property	line:32
-render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/create/CreateForm.js	/^  render() {$/;"	function	line:49
 render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/update/EditableCell.js	/^  render() {$/;"	function	line:2
 onDelEvent	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/update/CourseRow.js	/^  onDelEvent() {$/;"	function	line:2
 render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/update/CourseRow.js	/^  render() {$/;"	function	line:5
 render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/update/CourseTable.js	/^  render() {$/;"	function	line:4
 MaterialTableDemo	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/update/MaterialTable.js	/^export default function MaterialTableDemo() {$/;"	function	line:4
-render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/update/Update.js	/^  render() {$/;"	function	line:5
 html	/Users/dissonants/Documents/Git/precision-wiki/public/index.html	/^<html lang="en">$/;"	function	line:2
 head	/Users/dissonants/Documents/Git/precision-wiki/public/index.html	/^  <head>$/;"	function	line:3
 link	/Users/dissonants/Documents/Git/precision-wiki/public/index.html	/^    <link rel="stylesheet" href="https:\/\/fonts.googleapis.com\/icon?family=Material+Icons">$/;"	function	line:4
@@ -81,3 +72,68 @@ title	/Users/dissonants/Documents/Git/precision-wiki/public/index.html	/^    <ti
 body	/Users/dissonants/Documents/Git/precision-wiki/public/index.html	/^  <body>$/;"	function	line:15
 noscript	/Users/dissonants/Documents/Git/precision-wiki/public/index.html	/^    <noscript>You need to enable JavaScript to run this app.<\/noscript>$/;"	function	line:16
 div	/Users/dissonants/Documents/Git/precision-wiki/public/index.html	/^    <div id="root"><\/div>$/;"	function	line:17
+render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/create/Create.js	/^  render() {$/;"	function	line:7
+courses	/Users/dissonants/Documents/Git/precision-wiki/db-1559069598608.json	/^  "courses": [{$/;"	function	line:2
+id	/Users/dissonants/Documents/Git/precision-wiki/db-1559069598608.json	/^      "id": 1,$/;"	function	line:3
+title	/Users/dissonants/Documents/Git/precision-wiki/db-1559069598608.json	/^      "title": "Álgebra",$/;"	function	line:4
+description	/Users/dissonants/Documents/Git/precision-wiki/db-1559069598608.json	/^      "description": "Curso de Álgebra",$/;"	function	line:5
+route	/Users/dissonants/Documents/Git/precision-wiki/db-1559069598608.json	/^      "route": "\/algebra"$/;"	function	line:6
+id	/Users/dissonants/Documents/Git/precision-wiki/db-1559069598608.json	/^      "id": 2,$/;"	function	line:9
+title	/Users/dissonants/Documents/Git/precision-wiki/db-1559069598608.json	/^      "title": "Cálculo I",$/;"	function	line:10
+description	/Users/dissonants/Documents/Git/precision-wiki/db-1559069598608.json	/^      "description": "Curso de Cálculo I",$/;"	function	line:11
+route	/Users/dissonants/Documents/Git/precision-wiki/db-1559069598608.json	/^      "route": "\/calculo1"$/;"	function	line:12
+id	/Users/dissonants/Documents/Git/precision-wiki/db-1559069598608.json	/^      "id": 3,$/;"	function	line:15
+title	/Users/dissonants/Documents/Git/precision-wiki/db-1559069598608.json	/^      "title": "Álgebra Lineal",$/;"	function	line:16
+description	/Users/dissonants/Documents/Git/precision-wiki/db-1559069598608.json	/^      "description": "Curso de Álgebra Lineal",$/;"	function	line:17
+route	/Users/dissonants/Documents/Git/precision-wiki/db-1559069598608.json	/^      "route": "\/lineal"$/;"	function	line:18
+id	/Users/dissonants/Documents/Git/precision-wiki/db-1559069598608.json	/^      "id": 4,$/;"	function	line:21
+title	/Users/dissonants/Documents/Git/precision-wiki/db-1559069598608.json	/^      "title": "Cálculo II",$/;"	function	line:22
+description	/Users/dissonants/Documents/Git/precision-wiki/db-1559069598608.json	/^      "description": "Curso de Cálculo II",$/;"	function	line:23
+route	/Users/dissonants/Documents/Git/precision-wiki/db-1559069598608.json	/^      "route": "\/calculo2"$/;"	function	line:24
+courses	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^  "courses": [$/;"	function	line:2
+id	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "id": 1,$/;"	function	line:4
+title	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "title": "Álgebra",$/;"	function	line:5
+description	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "description": "Curso de Álgebra",$/;"	function	line:6
+route	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "route": "\/algebra"$/;"	function	line:7
+id	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "id": 2,$/;"	function	line:10
+title	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "title": "Cálculo I",$/;"	function	line:11
+description	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "description": "Curso de Cálculo I",$/;"	function	line:12
+route	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "route": "\/calculo1"$/;"	function	line:13
+id	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "id": 3,$/;"	function	line:16
+title	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "title": "Álgebra Lineal",$/;"	function	line:17
+description	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "description": "Curso de Álgebra Lineal",$/;"	function	line:18
+route	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "route": "\/lineal"$/;"	function	line:19
+id	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "id": 4,$/;"	function	line:22
+title	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "title": "Cálculo II",$/;"	function	line:23
+description	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "description": "Curso de Cálculo II",$/;"	function	line:24
+route	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "route": "\/calculo2"$/;"	function	line:25
+courses	/Users/dissonants/Documents/Git/precision-wiki/src/components/test/db.json	/^  "courses": [{$/;"	function	line:2
+id	/Users/dissonants/Documents/Git/precision-wiki/src/components/test/db.json	/^      "id": 1,$/;"	function	line:3
+title	/Users/dissonants/Documents/Git/precision-wiki/src/components/test/db.json	/^      "title": "Álgebra",$/;"	function	line:4
+description	/Users/dissonants/Documents/Git/precision-wiki/src/components/test/db.json	/^      "description": "Curso de Álgebra",$/;"	function	line:5
+route	/Users/dissonants/Documents/Git/precision-wiki/src/components/test/db.json	/^      "route": "\/algebra"$/;"	function	line:6
+id	/Users/dissonants/Documents/Git/precision-wiki/src/components/test/db.json	/^      "id": 2,$/;"	function	line:9
+title	/Users/dissonants/Documents/Git/precision-wiki/src/components/test/db.json	/^      "title": "Cálculo I",$/;"	function	line:10
+description	/Users/dissonants/Documents/Git/precision-wiki/src/components/test/db.json	/^      "description": "Curso de Cálculo I",$/;"	function	line:11
+route	/Users/dissonants/Documents/Git/precision-wiki/src/components/test/db.json	/^      "route": "\/calculo1"$/;"	function	line:12
+id	/Users/dissonants/Documents/Git/precision-wiki/src/components/test/db.json	/^      "id": 3,$/;"	function	line:15
+title	/Users/dissonants/Documents/Git/precision-wiki/src/components/test/db.json	/^      "title": "Álgebra Lineal",$/;"	function	line:16
+description	/Users/dissonants/Documents/Git/precision-wiki/src/components/test/db.json	/^      "description": "Curso de Álgebra Lineal",$/;"	function	line:17
+route	/Users/dissonants/Documents/Git/precision-wiki/src/components/test/db.json	/^      "route": "\/lineal"$/;"	function	line:18
+id	/Users/dissonants/Documents/Git/precision-wiki/src/components/test/db.json	/^      "id": 4,$/;"	function	line:21
+title	/Users/dissonants/Documents/Git/precision-wiki/src/components/test/db.json	/^      "title": "Cálculo II",$/;"	function	line:22
+description	/Users/dissonants/Documents/Git/precision-wiki/src/components/test/db.json	/^      "description": "Curso de Cálculo II",$/;"	function	line:23
+route	/Users/dissonants/Documents/Git/precision-wiki/src/components/test/db.json	/^      "route": "\/calculo2"$/;"	function	line:24
+class.title	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/create/CreateForm.js	/^  state = {$/;"	property	line:13
+class.description	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/create/CreateForm.js	/^    title: "",$/;"	property	line:14
+const.title	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/create/CreateForm.js	/^    const course = {$/;"	property	line:34
+render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/create/CreateForm.js	/^  render() {$/;"	function	line:48
+class.courses	/Users/dissonants/Documents/Git/precision-wiki/src/App.js	/^  state = {$/;"	property	line:37
+componentDidMount	/Users/dissonants/Documents/Git/precision-wiki/src/App.js	/^  componentDidMount() {$/;"	function	line:41
+render	/Users/dissonants/Documents/Git/precision-wiki/src/App.js	/^  render() {$/;"	function	line:47
+MaterialTableDemo	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/update/Example.js	/^export default function MaterialTableDemo() {$/;"	function	line:4
+render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/update/Update.js	/^  render() {$/;"	function	line:6
+const.title	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/update/UpdateTable.js	/^  const course = {$/;"	property	line:12
+class.columns	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/update/Table.js	/^  state = {$/;"	property	line:8
+componentDidMount	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/update/Table.js	/^  componentDidMount() {$/;"	function	line:16
+render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/update/Table.js	/^  render() {$/;"	function	line:22
