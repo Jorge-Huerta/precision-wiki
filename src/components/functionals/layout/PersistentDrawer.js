@@ -23,9 +23,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import AccountBoxIcon from "@material-ui/icons/AccountBox";
 import DescriptionIcon from "@material-ui/icons/Description";
 import AttachmentIcon from "@material-ui/icons/Attachment";
-import NoteAddIcon from "@material-ui/icons/NoteAdd";
-import UpdateIcon from "@material-ui/icons/Update";
-import DeleteIcon from "@material-ui/icons/Delete";
+import BookIcon from "@material-ui/icons/Book";
 import styles from "./styles/persistentdrawer-styles";
 
 import MenuContext from "../../context/menu-context";
@@ -86,25 +84,11 @@ const PersistentDrawerLeft = props => {
           </IconButton>
         </div>
 
-        <ListItem button component={Link} to="/create">
+        <ListItem button component={Link} to="/coursemanagement">
           <ListItemIcon>
-            <NoteAddIcon />
+            <BookIcon />
           </ListItemIcon>
-          <ListItemText inset primary="Crear curso" />
-        </ListItem>
-
-        <ListItem button component={Link} to="/update">
-          <ListItemIcon>
-            <UpdateIcon />
-          </ListItemIcon>
-          <ListItemText inset primary="Actualizar curso" />
-        </ListItem>
-
-        <ListItem button component={Link} to="/delete">
-          <ListItemIcon>
-            <DeleteIcon />
-          </ListItemIcon>
-          <ListItemText inset primary="Borrar curso" />
+          <ListItemText inset primary="Gestionar Cursos" />
         </ListItem>
 
         <Divider />
