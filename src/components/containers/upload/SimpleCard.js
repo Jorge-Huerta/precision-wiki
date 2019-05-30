@@ -10,13 +10,8 @@ function SimpleCard(props) {
   const {classes} = props;
 
   return (
-    <Card className={classes.card} >
-      <CardContent>
-        Nombres
-      </CardContent>
-      <CardActions>
-        {props.children}
-      </CardActions>
+    <Card className={classes.card}>
+      <CardContent>{props.children}</CardContent>
     </Card>
   );
 }

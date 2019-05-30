@@ -10,52 +10,53 @@
       }
     },
     {
-      "title": "Álgebra",
-      "description": "Curso de Álgebra",
-      "id": "-3pebBGV0",
-      "route": "/algebra",
+      "title": "Álgebra Lineal",
+      "description": "Curso de Álgebra Lineal",
+      "route": "/algebra lineal",
+      "id": "-3pebBGV0"
+    },
+    {
+      "title": "Química",
+      "description": "Curso de Química",
+      "route": "/quimica",
       "tableData": {
-        "id": 1
-      }
+        "id": 2
+      },
+      "id": "fqNAMWZ"
     },
     {
-      "title": "Cálculo II",
-      "description": "Curso de Cálculo II",
-      "route": "/calculo ii",
-      "id": "U88EIOS7S"
-    },
-    {
-      "title": "test",
-      "description": "id",
-      "route": "/test",
+      "title": "Programación",
+      "description": "Curso de Programación",
+      "route": "/programacion",
       "tableData": {
         "id": 3
       },
-      "id": "e-fMyyD"
-    },
-    {
-      "title": "test2",
-      "description": "id",
-      "route": "/test2",
-      "tableData": {
-        "id": 4
-      },
-      "id": "PTa82OC"
+      "id": "eJ_-qyE"
     }
   ],
   "users": [
     {
-      "user": "asdsad",
-      "password": "6Epoek5zG",
+      "user": "Jorge",
+      "type": "1",
+      "password": "0cG6cd3Vc",
       "tableData": {
-        "id": 4
+        "id": 1
       },
-      "id": "xL8vlN_"
+      "id": 6
     },
     {
-      "user": "Jorge",
-      "password": "gUwTWpzRf",
-      "id": "j9AiZvJ"
+      "user": "José",
+      "password": "uGmWH",
+      "id": 7
+    },
+    {
+      "user": "Alonso",
+      "type": "1",
+      "password": "UCwAwjhBH",
+      "tableData": {
+        "id": 3
+      },
+      "id": 9
     }
   ]
 }

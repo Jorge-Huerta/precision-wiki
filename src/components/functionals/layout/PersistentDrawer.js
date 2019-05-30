@@ -55,9 +55,7 @@ const PersistentDrawerLeft = props => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await API.get("/courses").then(res =>
-        setData(res.data)
-      );
+      const res = await API.get("/courses").then(res => setData(res.data));
     };
     fetchData();
   }, []);
@@ -119,7 +117,7 @@ const PersistentDrawerLeft = props => {
             <DescriptionIcon />
           </ListItemIcon>
           <ListItemText inset primary="Cursos" />
-          {menuContext.toggleCollapse ? <ExpandMore /> : <ExpandLess />}
+          {menuContext.showNested ? <ExpandMore /> : <ExpandLess />}
         </ListItem>
         <Collapse in={menuContext.showNested} timeout="auto" unmountOnExit>
           <List component="div" disablePadding>

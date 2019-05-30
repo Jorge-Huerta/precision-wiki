@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import SimpleCard from "./SimpleCard";
 import Grid from "@material-ui/core/Grid";
-import UploadButton from "./UploadButton";
+import Zone from "./Zone";
 
 class Upload extends Component {
   render() {
@@ -15,7 +15,7 @@ class Upload extends Component {
       >
         <Grid item xs={3}>
           <SimpleCard>
-            <UploadButton />
+            <Zone />
           </SimpleCard>
         </Grid>
       </Grid>

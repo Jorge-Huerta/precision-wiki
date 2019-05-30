@@ -3,14 +3,20 @@ import API from "../../../API/api";
 import shortid from "shortid";
 
 import MaterialTable from "material-table";
+import localization from "./localization";
 
 class Table extends Component {
   state = {
     columns: [
       {title: "Usuario", field: "user"},
-      {title: "Contraseña", field: "password", editable: "onUpdate"}
+      {title: "Contraseña", field: "password", editable: "onUpdate"},
+      {
+        title: "Tipo",
+        field: "type",
+        lookup: {1: "Consumidor", 2: "Administrador"}
+      }
     ],
-    users: [{id: "", user: "", password: ""}]
+    users: [{id: "", user: "", password: "", type: ""}]
   };
 
   componentDidMount() {
@@ -59,6 +65,7 @@ class Table extends Component {
             const index = data.indexOf(oldData);
             data.splice(index, 1);
             this.setState({users: data});
+            console.log(index);
             return API.delete(`/users/${oldData.id}`)
               .then(res => {
                 console.log(res);
@@ -68,6 +75,7 @@ class Table extends Component {
               });
           }
         }}
+        localization={localization}
       />
     );
   }
