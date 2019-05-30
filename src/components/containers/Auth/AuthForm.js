@@ -8,10 +8,10 @@ class AuthForm extends React.Component {
   state = {
     hola: "",
     controls: {
-      email: {
+      user: {
         elementType: "input",
         elementConfig: {
-          type: "email",
+          type: "text",
           placeholder: "Email"
         },
         value: "",
@@ -51,17 +51,17 @@ class AuthForm extends React.Component {
   render() {
     const {classes} = this.props;
     const {
-      controls: {email, password}
+      controls: {user, password}
     } = this.state;
 
     return (
       <form className={classes.container} noValidate autoComplete="off">
         <TextField
-          label="Email"
-          type="email"
+          label="Usuario"
+          type="text"
           className={classes.textField}
-          value={email.value}
-          onChange={this.handleChange("email")}
+          value={user.value}
+          onChange={this.handleChange("user")}
           margin="normal"
           variant="outlined"
           InputLabelProps={{shrink: true}}

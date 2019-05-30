@@ -7,6 +7,7 @@ import Layout from "./components/functionals/layout/Layout";
 import Course from "./components/containers/course/Course";
 import Upload from "./components/containers/upload/Upload";
 import CourseManagement from "./components/containers/admin/courses/CourseManagement";
+import UserManagement from "./components/containers/admin/users/UserManagement";
 import Auth from "./components/containers/Auth/Auth";
 
 import shortid from "shortid";
@@ -50,7 +51,12 @@ class App extends Component {
         <div>
           <Layout />
           <Switch>
-            <Route path="/coursemanagement" exact component={CourseManagement} />
+            <Route path="/usermanagement" exact component={UserManagement} />
+            <Route
+              path="/coursemanagement"
+              exact
+              component={CourseManagement}
+            />
             <Route path="/upload" exact component={Upload} />
             <Route path="/auth" exact component={Auth} />
             {courses}

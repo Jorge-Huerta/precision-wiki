@@ -1,10 +1,10 @@
 import React, {Component} from "react";
 import Table from "./Table";
 
-class CourseManagement extends Component {
+class UserManagement extends Component {
   render() {
     return <Table />;
   }
 }
 
-export default CourseManagement;
+export default UserManagement;

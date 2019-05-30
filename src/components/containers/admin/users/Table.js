@@ -1,37 +1,35 @@
 import React, {Component} from "react";
 import API from "../../../API/api";
+import shortid from "shortid";
 
 import MaterialTable from "material-table";
 
 class Table extends Component {
   state = {
     columns: [
-      {title: "Curso", field: "title"},
-      {title: "Descripción", field: "description"}
+      {title: "Usuario", field: "user"},
+      {title: "Contraseña", field: "password", editable: "onUpdate"}
     ],
-    courses: [{id: "", title: "", description: "", route: ""}]
+    users: [{id: "", user: "", password: ""}]
   };
 
   componentDidMount() {
-    API.get("/courses").then(response => {
-      this.setState({courses: response.data});
+    API.get("/users").then(response => {
+      this.setState({users: response.data});
     });
   }
 
   render() {
     return (
       <MaterialTable
-        title="Gestión de Cursos"
+        title="Gestión de Usuarios"
         columns={this.state.columns}
-        data={this.state.courses}
+        data={this.state.users}
         editable={{
           onRowAdd: newData => {
-            newData.route = `/${newData.title
-              .toLowerCase()
-              .normalize("NFD")
-              .replace(/[\u0300-\u036f]/g, "")}`;
-            this.setState({courses: [...this.state.courses, newData]});
-            return API.post("/courses", newData)
+            newData.password = shortid.generate();
+            this.setState({users: [...this.state.users, newData]});
+            return API.post("/users", newData)
               .then(res => {
                 console.log(res);
               })
@@ -40,18 +38,14 @@ class Table extends Component {
               });
           },
           onRowUpdate: (newData, oldData) => {
-            const data = this.state.courses;
+            const data = this.state.users;
             const index = data.indexOf(oldData);
             data[index] = newData;
-            this.setState({courses: data});
+            this.setState({users: data});
 
-            return API.put(`/courses/${oldData.id}`, {
-              title: newData.title,
-              description: newData.description,
-              route: `/${newData.title
-                .toLowerCase()
-                .normalize("NFD")
-                .replace(/[\u0300-\u036f]/g, "")}`
+            return API.put(`/users/${oldData.id}`, {
+              user: newData.user,
+              password: newData.password
             })
               .then(res => {
                 console.log(res);
@@ -61,11 +55,11 @@ class Table extends Component {
               });
           },
           onRowDelete: oldData => {
-            const data = this.state.courses;
+            const data = this.state.users;
             const index = data.indexOf(oldData);
             data.splice(index, 1);
-            this.setState({courses: data});
-            return API.delete(`/courses/${oldData.id}`)
+            this.setState({users: data});
+            return API.delete(`/users/${oldData.id}`)
               .then(res => {
                 console.log(res);
               })

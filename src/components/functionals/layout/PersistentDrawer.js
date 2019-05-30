@@ -24,6 +24,7 @@ import AccountBoxIcon from "@material-ui/icons/AccountBox";
 import DescriptionIcon from "@material-ui/icons/Description";
 import AttachmentIcon from "@material-ui/icons/Attachment";
 import BookIcon from "@material-ui/icons/Book";
+import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import styles from "./styles/persistentdrawer-styles";
 
 import MenuContext from "../../context/menu-context";
@@ -54,8 +55,8 @@ const PersistentDrawerLeft = props => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await API.get("/courses").then(result =>
-        setData(result.data)
+      const res = await API.get("/courses").then(res =>
+        setData(res.data)
       );
     };
     fetchData();
@@ -83,6 +84,13 @@ const PersistentDrawerLeft = props => {
             )}
           </IconButton>
         </div>
+
+        <ListItem button component={Link} to="/usermanagement">
+          <ListItemIcon>
+            <AccountCircleIcon />
+          </ListItemIcon>
+          <ListItemText inset primary="Gestionar Usuarios" />
+        </ListItem>
 
         <ListItem button component={Link} to="/coursemanagement">
           <ListItemIcon>
