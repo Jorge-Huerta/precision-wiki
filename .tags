@@ -37,7 +37,6 @@ class.showMenu	/Users/dissonants/Documents/Git/precision-wiki/src/components/con
 class.showNested	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/layout/MenuProvider.js	/^    showMenu: false,$/;"	property	line:6
 class.toggleMenu	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/layout/MenuProvider.js	/^    showNested: true,$/;"	property	line:7
 render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/layout/MenuProvider.js	/^  render() {$/;"	function	line:16
-render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/course/Course.js	/^  render() {$/;"	function	line:11
 getModalStyle	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/course/CourseModal.js	/^function getModalStyle() {$/;"	function	line:10
 getModalStyle	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/course/CourseModal.js	/^function getModalStyle() {$/;"	function	line:10
 class.Component.open	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/course/CourseModal.js	/^  state = {$/;"	property	line:22
@@ -120,15 +119,15 @@ render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/
 UploadButton	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/upload/UploadButton.js	/^function UploadButton(props) {$/;"	function	line:6
 UploadButton	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/upload/UploadButton.js	/^function UploadButton(props) {$/;"	function	line:6
 const.toolbar	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/users/localization.js	/^const localization = {$/;"	property	line:1
+render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/upload/Upload.js	/^  render() {$/;"	function	line:7
+createUser	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/upload/Zone.js	/^  async function createUser(body) {$/;"	function	line:6
+render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/files/FilesManagement.js	/^  render() {$/;"	function	line:5
+class.columns	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/files/Table.js	/^  state = {$/;"	property	line:7
+componentDidMount	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/files/Table.js	/^  componentDidMount() {$/;"	function	line:15
+render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/files/Table.js	/^  render() {$/;"	function	line:21
 class.columns	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/users/Table.js	/^  state = {$/;"	property	line:9
 componentDidMount	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/users/Table.js	/^  componentDidMount() {$/;"	function	line:22
 render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/users/Table.js	/^  render() {$/;"	function	line:28
-render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/upload/Upload.js	/^  render() {$/;"	function	line:7
-SimpleCard	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/upload/SimpleCard.js	/^function SimpleCard(props) {$/;"	function	line:9
-SimpleCard	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/upload/SimpleCard.js	/^function SimpleCard(props) {$/;"	function	line:9
-SimpleCard.propTypes.classes	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/upload/SimpleCard.js	/^SimpleCard.propTypes = {$/;"	property	line:19
-createUser	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/upload/Zone.js	/^  async function createUser(body) {$/;"	function	line:6
-render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/files/FilesManagement.js	/^  render() {$/;"	function	line:5
 courses	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^  "courses": [{$/;"	function	line:2
 title	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "title": "Cálculo I",$/;"	function	line:3
 description	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "description": "Curso de Cálculo I",$/;"	function	line:4
@@ -136,35 +135,45 @@ id	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "id": "VhngdWL
 route	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "route": "\/calculo i",$/;"	function	line:6
 tableData	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "tableData": {$/;"	function	line:7
 id	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^        "id": 0$/;"	function	line:8
-title	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "title": "Álgebra Lineal",$/;"	function	line:12
-description	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "description": "Curso de Álgebra Lineal",$/;"	function	line:13
-route	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "route": "\/algebra lineal",$/;"	function	line:14
-id	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "id": "-3pebBGV0"$/;"	function	line:15
-title	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "title": "Química",$/;"	function	line:18
-description	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "description": "Curso de Química",$/;"	function	line:19
-route	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "route": "\/quimica",$/;"	function	line:20
-tableData	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "tableData": {$/;"	function	line:21
-id	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^        "id": 2$/;"	function	line:22
-id	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "id": "fqNAMWZ"$/;"	function	line:24
-users	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^  "users": [{$/;"	function	line:27
-user	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "user": "Jorge",$/;"	function	line:28
-type	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "type": "1",$/;"	function	line:29
-password	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "password": "0cG6cd3Vc",$/;"	function	line:30
-tableData	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "tableData": {$/;"	function	line:31
-id	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^        "id": 1$/;"	function	line:32
-id	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "id": 6$/;"	function	line:34
-user	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "user": "Fabián",$/;"	function	line:37
-password	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "password": "uGmWH",$/;"	function	line:38
-id	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "id": 7$/;"	function	line:39
-user	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "user": "Sebastián",$/;"	function	line:42
-type	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "type": "2",$/;"	function	line:43
-password	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "password": "iIObXL7Tt",$/;"	function	line:44
-tableData	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "tableData": {$/;"	function	line:45
-id	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^        "id": 2$/;"	function	line:46
-id	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "id": 8$/;"	function	line:48
-class.columns	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/files/Table.js	/^  state = {$/;"	property	line:7
-componentDidMount	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/files/Table.js	/^  componentDidMount() {$/;"	function	line:15
-render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/files/Table.js	/^  render() {$/;"	function	line:21
-class.courses	/Users/dissonants/Documents/Git/precision-wiki/src/App.js	/^  state = {$/;"	property	line:36
-componentDidMount	/Users/dissonants/Documents/Git/precision-wiki/src/App.js	/^  componentDidMount() {$/;"	function	line:40
-render	/Users/dissonants/Documents/Git/precision-wiki/src/App.js	/^  render() {$/;"	function	line:46
+topic	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "topic": "Límites",$/;"	function	line:10
+link	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "link": "https:\/\/youtu.be\/rrbS5l--1Ss"$/;"	function	line:11
+title	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "title": "Álgebra Lineal",$/;"	function	line:14
+description	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "description": "Curso de Álgebra Lineal",$/;"	function	line:15
+route	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "route": "\/algebra lineal",$/;"	function	line:16
+id	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "id": "-3pebBGV0"$/;"	function	line:17
+title	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "title": "Química",$/;"	function	line:20
+description	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "description": "Curso de Química",$/;"	function	line:21
+route	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "route": "\/quimica",$/;"	function	line:22
+tableData	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "tableData": {$/;"	function	line:23
+id	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^        "id": 2$/;"	function	line:24
+id	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "id": "fqNAMWZ"$/;"	function	line:26
+title	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "title": "Programación",$/;"	function	line:29
+description	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "description": "Curso de Programación",$/;"	function	line:30
+route	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "route": "\/programacion",$/;"	function	line:31
+tableData	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "tableData": {$/;"	function	line:32
+id	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^        "id": 3$/;"	function	line:33
+id	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "id": "eJ_-qyE"$/;"	function	line:35
+users	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^  "users": [{$/;"	function	line:38
+user	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "user": "Jorge",$/;"	function	line:39
+type	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "type": "1",$/;"	function	line:40
+password	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "password": "0cG6cd3Vc",$/;"	function	line:41
+tableData	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "tableData": {$/;"	function	line:42
+id	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^        "id": 1$/;"	function	line:43
+id	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "id": 6$/;"	function	line:45
+user	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "user": "José",$/;"	function	line:48
+password	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "password": "uGmWH",$/;"	function	line:49
+type	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "type": "1",$/;"	function	line:50
+id	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "id": 7$/;"	function	line:51
+user	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "user": "Alonso",$/;"	function	line:54
+type	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "type": "1",$/;"	function	line:55
+password	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "password": "UCwAwjhBH",$/;"	function	line:56
+tableData	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "tableData": {$/;"	function	line:57
+id	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^        "id": 3$/;"	function	line:58
+id	/Users/dissonants/Documents/Git/precision-wiki/db.json	/^      "id": 9$/;"	function	line:60
+class.courses	/Users/dissonants/Documents/Git/precision-wiki/src/App.js	/^  state = {$/;"	property	line:38
+componentDidMount	/Users/dissonants/Documents/Git/precision-wiki/src/App.js	/^  componentDidMount() {$/;"	function	line:42
+render	/Users/dissonants/Documents/Git/precision-wiki/src/App.js	/^  render() {$/;"	function	line:48
+render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/course/Course.js	/^  render() {$/;"	function	line:9
+SimpleCard	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/upload/SimpleCard.js	/^function SimpleCard(props) {$/;"	function	line:10
+SimpleCard	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/upload/SimpleCard.js	/^function SimpleCard(props) {$/;"	function	line:10
+SimpleCard.propTypes.classes	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/upload/SimpleCard.js	/^SimpleCard.propTypes = {$/;"	property	line:26

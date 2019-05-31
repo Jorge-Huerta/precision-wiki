@@ -32,7 +32,7 @@ class Course extends Component {
 
           <Grid item xs={8}>
             <CourseCard>
-              <Modal topics={data.topics} link={data.link}/>
+              <Modal topics={data.topic} link={data.link}/>
             </CourseCard>
           </Grid>
         </Grid>

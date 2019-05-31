@@ -1,15 +1,6 @@
 {
   "courses": [
     {
-      "title": "Cálculo I",
-      "description": "Curso de Cálculo I",
-      "id": "VhngdWL09",
-      "route": "/calculo i",
-      "tableData": {
-        "id": 0
-      }
-    },
-    {
       "title": "Álgebra Lineal",
       "description": "Curso de Álgebra Lineal",
       "route": "/algebra lineal",
@@ -32,6 +23,15 @@
         "id": 3
       },
       "id": "eJ_-qyE"
+    },
+    {
+      "title": "Programación Avanzada",
+      "description": "Curso de Programación Avanzada",
+      "route": "/programacion avanzada",
+      "tableData": {
+        "id": 4
+      },
+      "id": "lV_reTL"
     }
   ],
   "users": [
@@ -47,16 +47,23 @@
     {
       "user": "José",
       "password": "uGmWH",
+      "type": "1",
       "id": 7
     },
     {
-      "user": "Alonso",
-      "type": "1",
+      "user": "Sebastián",
       "password": "UCwAwjhBH",
-      "tableData": {
-        "id": 3
-      },
+      "type": "2",
       "id": 9
+    },
+    {
+      "user": "Fabián",
+      "type": "1",
+      "password": "48FO3zBWf",
+      "tableData": {
+        "id": 4
+      },
+      "id": 11
     }
   ]
 }

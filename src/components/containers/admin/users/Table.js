@@ -51,7 +51,8 @@ class Table extends Component {
 
             return API.put(`/users/${oldData.id}`, {
               user: newData.user,
-              password: newData.password
+              password: newData.password,
+              type: newData.type
             })
               .then(res => {
                 console.log(res);

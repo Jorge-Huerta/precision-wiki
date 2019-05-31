@@ -24,6 +24,8 @@ const dynamicRouting = courses => {
               {...routerProps}
               title={course.title}
               description={course.description}
+              topic={course.topic}
+              link={course.link}
             />
           </div>
         )}
