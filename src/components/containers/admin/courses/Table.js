@@ -31,6 +31,7 @@ class Table extends Component {
               .normalize("NFD")
               .replace(/[\u0300-\u036f]/g, "")}`;
             this.setState({courses: [...this.state.courses, newData]});
+
             return API.post("/courses", newData)
               .then(res => {
                 console.log(res);
@@ -40,7 +41,7 @@ class Table extends Component {
               });
           },
           onRowUpdate: (newData, oldData) => {
-            const data = this.state.courses;
+            const data = [...this.state.courses];
             const index = data.indexOf(oldData);
             data[index] = newData;
             this.setState({courses: data});
@@ -61,10 +62,11 @@ class Table extends Component {
               });
           },
           onRowDelete: oldData => {
-            const data = this.state.courses;
+            const data = [...this.state.courses];
             const index = data.indexOf(oldData);
             data.splice(index, 1);
             this.setState({courses: data});
+
             return API.delete(`/courses/${oldData.id}`)
               .then(res => {
                 console.log(res);
