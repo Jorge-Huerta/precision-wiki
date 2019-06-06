@@ -4,6 +4,6 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-class.columns	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/courses/Table.js	/^  state = {$/;"	property	line:7
-componentDidMount	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/courses/Table.js	/^  componentDidMount() {$/;"	function	line:15
-render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/courses/Table.js	/^  render() {$/;"	function	line:21
+class.columns	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/files/Table.js	/^  state = {$/;"	property	line:7
+componentDidMount	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/files/Table.js	/^  componentDidMount() {$/;"	function	line:15
+render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/files/Table.js	/^  render() {$/;"	function	line:21

@@ -1,7 +1,29 @@
 {
-  "courses": [],
-  "users": [
+  "courses": [{
+      "title": "Cálculo I",
+      "description": "Curso de Cálculo I",
+      "route": "/calculo i",
+      "tableData": {
+        "id": 0
+      },
+      "id": 1,
+      "topics": [{
+        "id": "",
+        "name": "",
+        "link": ""
+      }]
+    },
     {
+      "title": "Álgebra",
+      "description": "Curso de Álgebra",
+      "route": "/algebra",
+      "tableData": {
+        "id": 1
+      },
+      "id": 2
+    }
+  ],
+  "users": [{
       "user": "Jorge",
       "type": "1",
       "password": "0cG6cd3Vc",
@@ -17,19 +39,19 @@
       "id": 7
     },
     {
-      "user": "Sebastián",
+      "user": "Enzo",
       "password": "UCwAwjhBH",
       "type": "2",
       "id": 9
     },
     {
-      "user": "Fabián",
+      "user": "Pepito",
       "type": "1",
-      "password": "48FO3zBWf",
+      "password": "vE4x9OKJG",
       "tableData": {
-        "id": 4
+        "id": 5
       },
-      "id": 11
+      "id": 13
     }
   ]
 }

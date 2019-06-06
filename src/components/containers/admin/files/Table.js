@@ -6,10 +6,10 @@ import MaterialTable from "material-table";
 class Table extends Component {
   state = {
     columns: [
-      {title: "Curso", field: "title"},
-      {title: "Descripción", field: "description"}
+      {title: "Título", field: "title"},
+      {title: "Link", field: "description"}
     ],
-    courses: [{id: "", title: "", description: "", route: ""}]
+    courses: [{id: "", description: "", title: "", link: "", topics: []}]
   };
 
   componentDidMount() {
@@ -24,14 +24,11 @@ class Table extends Component {
         title="Gestión de Cursos"
         columns={this.state.columns}
         data={this.state.courses}
+        parentChildData={(row, rows) => rows.find(topics => topics.id === row.parentId)}
         editable={{
           onRowAdd: newData => {
-            newData.route = `/${newData.title
-              .toLowerCase()
-              .normalize("NFD")
-              .replace(/[\u0300-\u036f]/g, "")}`;
-            this.setState({courses: [...this.state.courses, newData]});
-            return API.post("/courses", newData)
+            this.setState({courses: [...this.state.courses.topics, newData]});
+            return API.post("/courses/topics", newData)
               .then(res => {
                 console.log(res);
               })
@@ -45,13 +42,9 @@ class Table extends Component {
             data[index] = newData;
             this.setState({courses: data});
 
-            return API.put(`/courses/${oldData.id}`, {
+            return API.put(`/courses/courses/${oldData.id}`, {
               title: newData.title,
-              description: newData.description,
-              route: `/${newData.title
-                .toLowerCase()
-                .normalize("NFD")
-                .replace(/[\u0300-\u036f]/g, "")}`
+              link: newData.description
             })
               .then(res => {
                 console.log(res);
@@ -65,7 +58,7 @@ class Table extends Component {
             const index = data.indexOf(oldData);
             data.splice(index, 1);
             this.setState({courses: data});
-            return API.delete(`/courses/${oldData.id}`)
+            return API.delete(`/courses/courses/${oldData.id}`)
               .then(res => {
                 console.log(res);
               })

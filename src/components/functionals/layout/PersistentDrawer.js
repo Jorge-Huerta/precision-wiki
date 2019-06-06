@@ -25,6 +25,8 @@ import DescriptionIcon from "@material-ui/icons/Description";
 import AttachmentIcon from "@material-ui/icons/Attachment";
 import BookIcon from "@material-ui/icons/Book";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
+import NoteAddIcon from "@material-ui/icons/NoteAdd";
+import AttachIcon from "@material-ui/icons/AttachFile";
 import styles from "./styles/persistentdrawer-styles";
 
 import MenuContext from "../../context/menu-context";
@@ -97,6 +99,13 @@ const PersistentDrawerLeft = props => {
           <ListItemText inset primary="Gestionar Cursos" />
         </ListItem>
 
+        <ListItem button component={Link} to="/filemanagement">
+          <ListItemIcon>
+            <AttachIcon />
+          </ListItemIcon>
+          <ListItemText inset primary="Asociar Archivos" />
+        </ListItem>
+
         <Divider />
         <ListItem button>
           <ListItemIcon>
@@ -110,6 +119,13 @@ const PersistentDrawerLeft = props => {
             <AttachmentIcon />
           </ListItemIcon>
           <ListItemText inset primary="Subir Archivos" />
+        </ListItem>
+
+        <ListItem button component={Link} to="/management">
+          <ListItemIcon>
+            <NoteAddIcon />
+          </ListItemIcon>
+          <ListItemText inset primary="Inscribir Curso" />
         </ListItem>
 
         <ListItem button onClick={menuContext.toggleCollapse}>

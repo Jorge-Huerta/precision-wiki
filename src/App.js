@@ -4,10 +4,12 @@ import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import API from "./components/API/api";
 
 import Layout from "./components/functionals/layout/Layout";
-import Course from "./components/containers/course/Course";
+import Course from "./components/containers/consumer/course/Course";
+import Management from "./components/containers/consumer/management/Management";
 import Upload from "./components/containers/upload/Upload";
 import CourseManagement from "./components/containers/admin/courses/CourseManagement";
 import UserManagement from "./components/containers/admin/users/UserManagement";
+import FileManagement from "./components/containers/admin/files/FileManagement";
 import Auth from "./components/containers/Auth/Auth";
 
 import shortid from "shortid";
@@ -59,8 +61,10 @@ class App extends Component {
               exact
               component={CourseManagement}
             />
+            <Route path="/filemanagement" exact component={FileManagement} />
             <Route path="/upload" exact component={Upload} />
             <Route path="/auth" exact component={Auth} />
+            <Route path="/management" exact component={Management} />
             {courses}
           </Switch>
         </div>

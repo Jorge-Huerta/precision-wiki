@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import Table from "./Table";
+import Select from "./Select";
 
 class FileManagement extends Component {
   render() {
