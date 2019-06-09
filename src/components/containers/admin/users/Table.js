@@ -8,19 +8,26 @@ import localization from "./localization";
 class Table extends Component {
   state = {
     columns: [
-      {title: "Usuario", field: "user"},
+      {title: "Usuario", field: "username"},
       {title: "Contraseña", field: "password", editable: "onUpdate"},
       {
-        title: "Tipo",
-        field: "type",
-        lookup: {1: "Consumidor", 2: "Administrador"}
+        title: "Aportador",
+        field: "aportador",
+        lookup: {true: "Sí", false: "No"}
+      },
+      {
+        title: "Administrador",
+        field: "administrador",
+        lookup: {true: "Sí", false: "No"}
       }
     ],
-    users: [{id: "", user: "", password: "", type: ""}]
+    users: [
+      {id: "", nombre: "", password: "", aportador: true, administrador: true}
+    ]
   };
 
   componentDidMount() {
-    API.get("/users").then(response => {
+    API.get("/usuario").then(response => {
       this.setState({users: response.data});
     });
   }
@@ -35,7 +42,7 @@ class Table extends Component {
           onRowAdd: newData => {
             newData.password = shortid.generate();
             this.setState({users: [...this.state.users, newData]});
-            return API.post("/users", newData)
+            return API.post("/usuario", newData)
               .then(res => {
                 console.log(res);
               })
@@ -49,10 +56,11 @@ class Table extends Component {
             data[index] = newData;
             this.setState({users: data});
 
-            return API.put(`/users/${oldData.id}`, {
-              user: newData.user,
+            return API.put(`/usuario/${oldData.id}`, {
+              nombre: newData.user,
               password: newData.password,
-              type: newData.type
+              aportador: newData.aportador,
+              administrador: newData.administrador
             })
               .then(res => {
                 console.log(res);
@@ -67,7 +75,7 @@ class Table extends Component {
             data.splice(index, 1);
             this.setState({users: data});
             console.log(index);
-            return API.delete(`/users/${oldData.id}`)
+            return API.delete(`/usuario/${oldData.id}`)
               .then(res => {
                 console.log(res);
               })

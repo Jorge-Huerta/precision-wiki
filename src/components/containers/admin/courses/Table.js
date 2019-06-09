@@ -6,14 +6,14 @@ import MaterialTable from "material-table";
 class Table extends Component {
   state = {
     columns: [
-      {title: "Curso", field: "title"},
-      {title: "Descripción", field: "description"}
+      {title: "Nombre", field: "nombre"},
+      {title: "Descripción", field: "descripcion"}
     ],
-    courses: [{id: "", title: "", description: "", route: ""}]
+    courses: [{id: "", nombre: "", description: "", ruta: ""}]
   };
 
   componentDidMount() {
-    API.get("/courses").then(response => {
+    API.get("/curso").then(response => {
       this.setState({courses: response.data});
     });
   }
@@ -26,13 +26,13 @@ class Table extends Component {
         data={this.state.courses}
         editable={{
           onRowAdd: newData => {
-            newData.route = `/${newData.title
+            newData.ruta = `/${newData.nombre
               .toLowerCase()
               .normalize("NFD")
               .replace(/[\u0300-\u036f]/g, "")}`;
             this.setState({courses: [...this.state.courses, newData]});
 
-            return API.post("/courses", newData)
+            return API.post("/curso", newData)
               .then(res => {
                 console.log(res);
               })
@@ -46,10 +46,10 @@ class Table extends Component {
             data[index] = newData;
             this.setState({courses: data});
 
-            return API.put(`/courses/${oldData.id}`, {
-              title: newData.title,
-              description: newData.description,
-              route: `/${newData.title
+            return API.put(`/curso/${oldData.id}`, {
+              nombre: newData.nombre,
+              descripcion: newData.descripcion,
+              route: `/${newData.nombre
                 .toLowerCase()
                 .normalize("NFD")
                 .replace(/[\u0300-\u036f]/g, "")}`
@@ -67,7 +67,7 @@ class Table extends Component {
             data.splice(index, 1);
             this.setState({courses: data});
 
-            return API.delete(`/courses/${oldData.id}`)
+            return API.delete(`/curso/${oldData.id}`)
               .then(res => {
                 console.log(res);
               })
