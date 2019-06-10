@@ -1,8 +1,11 @@
 import React from "react";
+import {connect} from "react-redux";
+import {compose} from "redux";
 import {withStyles} from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import styles from "./styles/authform-styles";
+import * as actions from "../../store/actions/index";
 
 class AuthForm extends React.Component {
   state = {
@@ -48,6 +51,14 @@ class AuthForm extends React.Component {
     });
   };
 
+  handleSubmit = event => {
+    event.prevenDefault();
+    this.props.onAuth(
+      this.state.controls.user.value,
+      this.state.controls.password.value
+    );
+  };
+
   render() {
     const {classes} = this.props;
     const {
@@ -55,7 +66,12 @@ class AuthForm extends React.Component {
     } = this.state;
 
     return (
-      <form className={classes.container} noValidate autoComplete="off">
+      <form
+        onSubmit={this.handleSubmit}
+        className={classes.container}
+        noValidate
+        autoComplete="off"
+      >
         <TextField
           label="Usuario"
           type="text"
@@ -78,7 +94,12 @@ class AuthForm extends React.Component {
           variant="outlined"
           InputLabelProps={{shrink: true}}
         />
-        <Button variant="contained" color="primary" className={classes.button}>
+        <Button
+          type="submit"
+          variant="contained"
+          color="primary"
+          className={classes.button}
+        >
           Ingresar
         </Button>
       </form>
@@ -86,4 +107,16 @@ class AuthForm extends React.Component {
   }
 }
 
-export default withStyles(styles)(AuthForm);
+const mapDispatchToProps = dispatch => {
+  return {
+    onAuth: (user, password) => dispatch(actions.auth(user, password))
+  };
+};
+
+export default compose(
+  connect(
+    null,
+    mapDispatchToProps
+  ),
+  withStyles(styles)
+)(AuthForm);

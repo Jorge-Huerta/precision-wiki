@@ -1,14 +1,28 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {createStore} from "redux";
+
 import {Provider} from "react-redux";
+import {createStore, applyMiddleware, compose} from "redux";
+import reducer from "./components/store/reducer";
 
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import reducer from "./components/store/reducer";
 
-const store = createStore(reducer);
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const logger = store => {
+  return next => {
+    return action => {
+      console.log("[Middleware] Dispatching", action);
+      const res = next(action);
+      console.log("[Middleware] next state", store.getState());
+      return res;
+    };
+  };
+};
+
+const store = createStore(reducer, composeEnhancers(applyMiddleware(logger)));
 
 ReactDOM.render(
   <Provider store={store}>
