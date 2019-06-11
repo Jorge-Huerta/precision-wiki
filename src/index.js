@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 
 import {Provider} from "react-redux";
 import {createStore, applyMiddleware, compose} from "redux";
-import reducer from "./components/store/reducer";
+import thunk from "redux-thunk";
+import reducer from "./components/store/reducers/reducer";
 
 import "./index.css";
 import App from "./App";
@@ -22,7 +23,7 @@ const logger = store => {
   };
 };
 
-const store = createStore(reducer, composeEnhancers(applyMiddleware(logger)));
+const store = createStore(reducer, composeEnhancers(applyMiddleware(logger, thunk)));
 
 ReactDOM.render(
   <Provider store={store}>

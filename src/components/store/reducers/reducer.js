@@ -1,4 +1,4 @@
-import * as actionTypes from "./actions/actionTypes";
+import * as actionTypes from "../actions/actionTypes";
 
 const initialState = {
   username: "",
@@ -8,7 +8,11 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.AUTH_SUCCESS:
+      return console.log("success");
+    case actionTypes.AUTH_FAIL:
+      return console.log("fail");
+    default:
   }
-}
+};
 
 export default reducer;
