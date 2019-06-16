@@ -2,15 +2,23 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import {Provider} from "react-redux";
-import {createStore, applyMiddleware, compose} from "redux";
+import {createStore, combineReducers, applyMiddleware, compose} from "redux";
 import thunk from "redux-thunk";
-import reducer from "./components/store/reducers/reducer";
+import authReducer from "./components/store/reducers/auth";
+import coursesReducer from "./components/store/reducers/courses";
+import usersReducer from "./components/store/reducers/users";
 
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const rootReducer = combineReducers({
+  auth: authReducer,
+  courses: coursesReducer,
+  users: usersReducer
+});
 
 const logger = store => {
   return next => {
@@ -23,7 +31,10 @@ const logger = store => {
   };
 };
 
-const store = createStore(reducer, composeEnhancers(applyMiddleware(logger, thunk)));
+const store = createStore(
+  rootReducer,
+  composeEnhancers(applyMiddleware(logger, thunk))
+);
 
 ReactDOM.render(
   <Provider store={store}>

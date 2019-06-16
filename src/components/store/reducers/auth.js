@@ -8,10 +8,11 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.AUTH_SUCCESS:
-      return console.log("success");
+      return state;
     case actionTypes.AUTH_FAIL:
-      return console.log("fail");
+      return state;
     default:
+    return state
   }
 };
 

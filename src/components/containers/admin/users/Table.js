@@ -1,9 +1,10 @@
 import React, {Component} from "react";
-import API from "../../../API/api";
+import {connect} from "react-redux";
+import * as usersActions from "../../../store/actions/index";
 import shortid from "shortid";
 
 import MaterialTable from "material-table";
-import localization from "./localization";
+import localization from "../config/localization";
 
 class Table extends Component {
   state = {
@@ -20,16 +21,11 @@ class Table extends Component {
         field: "administrador",
         lookup: {true: "Sí", false: "No"}
       }
-    ],
-    users: [
-      {id: "", nombre: "", password: "", aportador: true, administrador: true}
     ]
   };
 
   componentDidMount() {
-    API.get("/usuario").then(response => {
-      this.setState({users: response.data});
-    });
+    this.props.onInitUsers();
   }
 
   render() {
@@ -37,51 +33,17 @@ class Table extends Component {
       <MaterialTable
         title="Gestión de Usuarios"
         columns={this.state.columns}
-        data={this.state.users}
+        data={this.props.usr}
         editable={{
           onRowAdd: newData => {
             newData.password = shortid.generate();
-            this.setState({users: [...this.state.users, newData]});
-            return API.post("/usuario", newData)
-              .then(res => {
-                console.log(res);
-              })
-              .catch(err => {
-                console.log(err);
-              });
+            return this.props.onUsersCreated(newData);
           },
           onRowUpdate: (newData, oldData) => {
-            const data = this.state.users;
-            const index = data.indexOf(oldData);
-            data[index] = newData;
-            this.setState({users: data});
-
-            return API.put(`/usuario/${oldData.id}`, {
-              nombre: newData.user,
-              password: newData.password,
-              aportador: newData.aportador,
-              administrador: newData.administrador
-            })
-              .then(res => {
-                console.log(res);
-              })
-              .catch(err => {
-                console.log(err);
-              });
+            return this.props.onUsersUpdated(oldData, newData);
           },
           onRowDelete: oldData => {
-            const data = this.state.users;
-            const index = data.indexOf(oldData);
-            data.splice(index, 1);
-            this.setState({users: data});
-            console.log(index);
-            return API.delete(`/usuario/${oldData.id}`)
-              .then(res => {
-                console.log(res);
-              })
-              .catch(err => {
-                console.log(err);
-              });
+            return this.props.onUsersDelete(oldData);
           }
         }}
         localization={localization}
@@ -90,4 +52,23 @@ class Table extends Component {
   }
 }
 
-export default Table;
+const mapStateToProps = state => {
+  return {
+    usr: state.users.users
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    onInitUsers: () => dispatch(usersActions.initUsers()),
+    onUsersCreated: newData => dispatch(usersActions.addUsers(newData)),
+    onUsersUpdated: (oldData, newData) =>
+      dispatch(usersActions.putUsers(oldData, newData)),
+    onUsersDelete: oldData => dispatch(usersActions.removeUsers(oldData))
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Table);
