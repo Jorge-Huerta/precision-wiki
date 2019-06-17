@@ -53,7 +53,7 @@ class AuthForm extends Component {
   };
 
   handleSubmit = event => {
-    event.prevenDefault();
+    event.preventDefault();
     this.props.onAuth(
       this.state.controls.username.value,
       this.state.controls.password.value
