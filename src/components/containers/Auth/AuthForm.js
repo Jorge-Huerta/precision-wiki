@@ -1,26 +1,25 @@
-import React from "react";
+import React, {Component} from "react";
 import {connect} from "react-redux";
 import {compose} from "redux";
+import * as authActions from "../../store/actions/index";
+
 import {withStyles} from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import styles from "./styles/authform-styles";
-import * as actions from "../../store/actions/index";
 
-class AuthForm extends React.Component {
+class AuthForm extends Component {
   state = {
-    hola: "",
     controls: {
-      user: {
+      username: {
         elementType: "input",
         elementConfig: {
           type: "text",
-          placeholder: "Email"
+          placeholder: "Usuario"
         },
         value: "",
         validation: {
-          required: true,
-          isEmail: true
+          required: true
         },
         valid: false,
         touched: false
@@ -42,19 +41,21 @@ class AuthForm extends React.Component {
     }
   };
 
-  handleChange = name => ({target: {value}}) => {
-    this.setState({
-      controls: {
-        ...this.state.controls,
-        [name]: value
+  handleChange = (event, controlName) => {
+    const updatedControls = {
+      ...this.state.controls,
+      [controlName]: {
+        ...this.state.controls[controlName],
+        value: event.target.value
       }
-    });
+    };
+    this.setState({controls: updatedControls});
   };
 
   handleSubmit = event => {
     event.prevenDefault();
     this.props.onAuth(
-      this.state.controls.user.value,
+      this.state.controls.username.value,
       this.state.controls.password.value
     );
   };
@@ -62,7 +63,7 @@ class AuthForm extends React.Component {
   render() {
     const {classes} = this.props;
     const {
-      controls: {user, password}
+      controls: {username, password}
     } = this.state;
 
     return (
@@ -76,20 +77,18 @@ class AuthForm extends React.Component {
           label="Usuario"
           type="text"
           className={classes.textField}
-          value={user.value}
-          onChange={this.handleChange("user")}
+          value={username.value}
+          onChange={(event) => this.handleChange(event, "username")}
           margin="normal"
           variant="outlined"
           InputLabelProps={{shrink: true}}
         />
-
         <TextField
           label="Contraseña"
           type="password"
           className={classes.textField}
           value={password.value}
-          onChange={this.handleChange("password")}
-          autoComplete="current-password"
+          onChange={(event) => this.handleChange(event, "password")}
           margin="normal"
           variant="outlined"
           InputLabelProps={{shrink: true}}
@@ -109,7 +108,8 @@ class AuthForm extends React.Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-    onAuth: (user, password) => dispatch(actions.auth(user, password))
+    onAuth: (username, password) =>
+      dispatch(authActions.auth(username, password))
   };
 };
 

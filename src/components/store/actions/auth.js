@@ -29,7 +29,7 @@ export const auth = (username, password) => {
       username: username,
       password: password
     };
-    API.post("/login", authData)
+    return API.post("/login", authData)
       .then(res => {
         console.log(res);
         dispatch(authSuccess(res.data));
