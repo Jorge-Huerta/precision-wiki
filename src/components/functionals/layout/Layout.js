@@ -1,4 +1,7 @@
 import React, {Component} from "react";
+
+import {connect} from "react-redux";
+
 import AppBar from "./ButtonAppBar";
 import Drawer from "./PersistentDrawer";
 import MenuProvider from "../../containers/layout/MenuProvider";
@@ -9,12 +12,18 @@ class Layout extends Component {
     return (
       <Aux>
         <MenuProvider>
-          <AppBar />
-          <Drawer />
+          <AppBar token={this.props.token} />
+          <Drawer token={this.props.token} />
         </MenuProvider>
       </Aux>
     );
   }
 }
 
-export default Layout;
+const mapStateToProps = state => {
+  return {
+    token: state.auth.decodedToken
+  };
+};
+
+export default connect(mapStateToProps)(Layout);

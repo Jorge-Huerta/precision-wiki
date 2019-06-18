@@ -85,56 +85,68 @@ const PersistentDrawerLeft = props => {
           </IconButton>
         </div>
 
-        <ListItem button component={Link} to="/usermanagement">
-          <ListItemIcon>
-            <AccountCircleIcon />
-          </ListItemIcon>
-          <ListItemText inset primary="Gestionar Usuarios" />
-        </ListItem>
+        {props.token.administrador ? (
+          <ListItem button component={Link} to="/usermanagement">
+            <ListItemIcon>
+              <AccountCircleIcon />
+            </ListItemIcon>
+            <ListItemText inset primary="Gestionar Usuarios" />
+          </ListItem>
+        ) : null}
 
-        <ListItem button component={Link} to="/coursemanagement">
-          <ListItemIcon>
-            <BookIcon />
-          </ListItemIcon>
-          <ListItemText inset primary="Gestionar Cursos" />
-        </ListItem>
+        {props.token.administrador ? (
+          <ListItem button component={Link} to="/coursemanagement">
+            <ListItemIcon>
+              <BookIcon />
+            </ListItemIcon>
+            <ListItemText inset primary="Gestionar Cursos" />
+          </ListItem>
+        ) : null}
 
-        <ListItem button component={Link} to="/filemanagement">
-          <ListItemIcon>
-            <AttachIcon />
-          </ListItemIcon>
-          <ListItemText inset primary="Asociar Archivos" />
-        </ListItem>
+        {props.token.administrador ? (
+          <ListItem button component={Link} to="/filemanagement">
+            <ListItemIcon>
+              <AttachIcon />
+            </ListItemIcon>
+            <ListItemText inset primary="Asociar Archivos" />
+          </ListItem>
+        ) : null}
 
-        <Divider />
-        <ListItem button>
-          <ListItemIcon>
-            <AccountBoxIcon />
-          </ListItemIcon>
-          <ListItemText inset primary="Perfil" />
-        </ListItem>
-
-        <ListItem button component={Link} to="/upload">
+        {!props.token.administrador && props.token.aportador ? <ListItem button component={Link} to="/upload">
           <ListItemIcon>
             <AttachmentIcon />
           </ListItemIcon>
           <ListItemText inset primary="Subir Archivos" />
-        </ListItem>
+        </ListItem> : null}
 
-        <ListItem button component={Link} to="/management">
-          <ListItemIcon>
-            <NoteAddIcon />
-          </ListItemIcon>
-          <ListItemText inset primary="Inscribir Curso" />
-        </ListItem>
+        {!props.token.administrador && !props.token.aportador && props.token.id ? (
+          <ListItem button>
+            <ListItemIcon>
+              <AccountBoxIcon />
+            </ListItemIcon>
+            <ListItemText inset primary="Perfil" />
+          </ListItem>
+        ) : null}
 
-        <ListItem button onClick={menuContext.toggleCollapse}>
-          <ListItemIcon>
-            <DescriptionIcon />
-          </ListItemIcon>
-          <ListItemText inset primary="Cursos" />
-          {menuContext.showNested ? <ExpandMore /> : <ExpandLess />}
-        </ListItem>
+        {!props.token.administrador && !props.token.aportador && props.token.id? (
+          <ListItem button component={Link} to="/management">
+            <ListItemIcon>
+              <NoteAddIcon />
+            </ListItemIcon>
+            <ListItemText inset primary="Inscribir Curso" />
+          </ListItem>
+        ) : null}
+
+        {!props.token.administrador && !props.token.aportador && props.token.id ? (
+          <ListItem button onClick={menuContext.toggleCollapse}>
+            <ListItemIcon>
+              <DescriptionIcon />
+            </ListItemIcon>
+            <ListItemText inset primary="Cursos" />
+            {menuContext.showNested ? <ExpandMore /> : <ExpandLess />}
+          </ListItem>
+        ) : null}
+
         <Collapse in={menuContext.showNested} timeout="auto" unmountOnExit>
           <List component="div" disablePadding>
             {getCourses(data, classes)}

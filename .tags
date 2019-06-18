@@ -180,9 +180,10 @@ componentDidMount	/Users/dissonants/Documents/Git/precision-wiki/src/components/
 render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/users/Table.js	/^  render() {$/;"	function	line:31
 const.users	/Users/dissonants/Documents/Git/precision-wiki/src/components/store/reducers/users.js	/^const initialState = {$/;"	property	line:3
 switch	/Users/dissonants/Documents/Git/precision-wiki/src/components/store/reducers/users.js	/^  switch (action.type) {$/;"	function	line:16
-class.controls	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/Auth/AuthForm.js	/^  state = {$/;"	property	line:12
-render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/Auth/AuthForm.js	/^  render() {$/;"	function	line:63
-const.token	/Users/dissonants/Documents/Git/precision-wiki/src/components/store/reducers/auth.js	/^const initialState = {$/;"	property	line:3
-switch	/Users/dissonants/Documents/Git/precision-wiki/src/components/store/reducers/auth.js	/^  switch (action.type) {$/;"	function	line:27
 const.username	/Users/dissonants/Documents/Git/precision-wiki/src/components/store/actions/auth.js	/^    const authData = {$/;"	property	line:28
 const.password	/Users/dissonants/Documents/Git/precision-wiki/src/components/store/actions/auth.js	/^      username: username,$/;"	property	line:29
+const.token	/Users/dissonants/Documents/Git/precision-wiki/src/components/store/reducers/auth.js	/^const initialState = {$/;"	property	line:4
+const.decodedToken	/Users/dissonants/Documents/Git/precision-wiki/src/components/store/reducers/auth.js	/^  token: "",$/;"	property	line:5
+switch	/Users/dissonants/Documents/Git/precision-wiki/src/components/store/reducers/auth.js	/^  switch (action.type) {$/;"	function	line:47
+class.controls	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/Auth/AuthForm.js	/^  state = {$/;"	property	line:14
+render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/Auth/AuthForm.js	/^  render() {$/;"	function	line:65

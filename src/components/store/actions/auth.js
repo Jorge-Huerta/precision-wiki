@@ -11,16 +11,22 @@ export const authStart = () => {
 export const authSuccess = token => {
   return {
     type: actionTypes.AUTH_SUCCESS,
-    token: token
+    token: token.token
   };
 };
 
 export const authFail = error => {
   return {
     type: actionTypes.AUTH_FAIL,
-    error: error
+    error: error.messages
   };
 };
+
+export const logout = () => {
+  return {
+    type: actionTypes.AUTH_LOGOUT,
+  }
+}
 
 export const auth = (username, password) => {
   return dispatch => {
@@ -32,11 +38,11 @@ export const auth = (username, password) => {
     return API.post("/login", authData)
       .then(res => {
         console.log(res);
-        dispatch(authSuccess(res.data.token));
+        dispatch(authSuccess(res.data));
       })
       .catch(err => {
         console.log(err);
-        dispatch(authFail(err));
+        dispatch(authFail(err.response.data));
       });
   };
 };

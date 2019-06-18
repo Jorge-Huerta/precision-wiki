@@ -4,5 +4,3 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-const.username	/Users/dissonants/Documents/Git/precision-wiki/src/components/store/actions/auth.js	/^    const authData = {$/;"	property	line:28
-const.password	/Users/dissonants/Documents/Git/precision-wiki/src/components/store/actions/auth.js	/^      username: username,$/;"	property	line:29

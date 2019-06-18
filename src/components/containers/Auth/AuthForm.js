@@ -1,4 +1,6 @@
 import React, {Component} from "react";
+import {Redirect} from "react-router-dom";
+
 import {connect} from "react-redux";
 import {compose} from "redux";
 import * as authActions from "../../store/actions/index";
@@ -65,7 +67,26 @@ class AuthForm extends Component {
     const {
       controls: {username, password}
     } = this.state;
+    let errorMessage = null;
 
+    if (this.props.error) {
+      errorMessage = <p>{this.props.error}</p>;
+    }
+
+    let authRedirect = null;
+
+    if (this.props.decodedToken.administrador) {
+      authRedirect = <Redirect to="/usermanagement" />;
+    } else if (this.props.decodedToken.aportador) {
+      authRedirect = <Redirect to="/upload" />;
+    } else if (
+      !this.props.token.administrador &&
+      !this.props.token.aportador &&
+      this.props.token.id
+    ) {
+      authRedirect = <Redirect to="/management" />;
+    }
+    
     return (
       <form
         onSubmit={this.handleSubmit}
@@ -73,12 +94,14 @@ class AuthForm extends Component {
         noValidate
         autoComplete="off"
       >
+        {errorMessage}
+        {authRedirect}
         <TextField
           label="Usuario"
           type="text"
           className={classes.textField}
           value={username.value}
-          onChange={(event) => this.handleChange(event, "username")}
+          onChange={event => this.handleChange(event, "username")}
           margin="normal"
           variant="outlined"
           InputLabelProps={{shrink: true}}
@@ -88,7 +111,7 @@ class AuthForm extends Component {
           type="password"
           className={classes.textField}
           value={password.value}
-          onChange={(event) => this.handleChange(event, "password")}
+          onChange={event => this.handleChange(event, "password")}
           margin="normal"
           variant="outlined"
           InputLabelProps={{shrink: true}}
@@ -106,6 +129,14 @@ class AuthForm extends Component {
   }
 }
 
+const mapStateToProps = state => {
+  return {
+    token: state.auth.token,
+    error: state.auth.error,
+    decodedToken: state.auth.decodedToken
+  };
+};
+
 const mapDispatchToProps = dispatch => {
   return {
     onAuth: (username, password) =>
@@ -115,7 +146,7 @@ const mapDispatchToProps = dispatch => {
 
 export default compose(
   connect(
-    null,
+    mapStateToProps,
     mapDispatchToProps
   ),
   withStyles(styles)

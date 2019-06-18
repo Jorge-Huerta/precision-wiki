@@ -1,7 +1,16 @@
 import * as actionTypes from "../actions/actionTypes";
+const jwtDecode = require("jwt-decode");
 
 const initialState = {
-  token: ""
+  token: "",
+  decodedToken: {
+    id: "",
+    name: "",
+    run: "",
+    administrador: "",
+    aportador: ""
+  },
+  error: ""
 };
 
 const authStart = (state, action) => {
@@ -13,13 +22,24 @@ const authStart = (state, action) => {
 const authSuccess = (state, action) => {
   return {
     ...state,
-    token: action.token
+    token: action.token,
+    decodedToken: jwtDecode(action.token)
   };
 };
 
 const authFail = (state, action) => {
   return {
-    ...state
+    ...state,
+    error: action.error
+  };
+};
+
+const authLogout = (state, action) => {
+  return {
+    ...state,
+    token: "",
+    decodedToken: "",
+    error: ""
   };
 };
 
@@ -33,6 +53,9 @@ const reducer = (state = initialState, action) => {
     }
     case actionTypes.AUTH_FAIL: {
       return authFail(state, action);
+    }
+    case actionTypes.AUTH_LOGOUT: {
+      return authLogout(state, action);
     }
     default: {
       return state;

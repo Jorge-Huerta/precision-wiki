@@ -10,7 +10,7 @@ import MenuContext from "../../context/menu-context";
 import styles from "./styles/appbar-styles";
 import {Link} from "react-router-dom";
 
-const ButtonAppBar = (props) => {
+const ButtonAppBar = props => {
   const {classes} = props;
   const menuContext = useContext(MenuContext);
 
@@ -18,24 +18,32 @@ const ButtonAppBar = (props) => {
     <div className={classes.root}>
       <AppBar position="static" color="primary">
         <Toolbar disableGutters={!menuContext.showMenu}>
-          <IconButton
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="Menu"
-            onClick={menuContext.toggleMenu}
-          >
-            <MenuIcon />
-          </IconButton>
+          {props.token.id ? (
+            <IconButton
+              className={classes.menuButton}
+              color="inherit"
+              aria-label="Menu"
+              onClick={menuContext.toggleMenu}
+            >
+              <MenuIcon />
+            </IconButton>
+          ) : null}
           <Typography variant="h6" color="inherit" className={classes.grow}>
             Precisión-Wiki
           </Typography>
-          <Button color="inherit" component={Link} to="/auth">
-            Login
-          </Button>
+          {!props.token.id ? (
+            <Button color="inherit" component={Link} to="/auth">
+              Login
+            </Button>
+          ) : (
+            <Button color="inherit" component={Link} to="/logout">
+              Logout
+            </Button>
+          )}
         </Toolbar>
       </AppBar>
     </div>
   );
-}
+};
 
 export default withStyles(styles)(ButtonAppBar);

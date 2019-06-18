@@ -11,6 +11,7 @@ import CourseManagement from "./components/containers/admin/courses/CourseManage
 import UserManagement from "./components/containers/admin/users/UserManagement";
 import FileManagement from "./components/containers/admin/files/FileManagement";
 import Auth from "./components/containers/Auth/Auth";
+import Logout from "./components/containers/Auth/Logout/Logout";
 
 import shortid from "shortid";
 
@@ -64,6 +65,7 @@ class App extends Component {
             <Route path="/filemanagement" exact component={FileManagement} />
             <Route path="/upload" exact component={Upload} />
             <Route path="/auth" exact component={Auth} />
+            <Route path="/logout" exact component={Logout} />
             <Route path="/management" exact component={Management} />
             {courses}
           </Switch>
