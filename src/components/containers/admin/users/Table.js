@@ -10,6 +10,7 @@ class Table extends Component {
   state = {
     columns: [
       {title: "Usuario", field: "username"},
+      {title: "Nombre", field: "nombre"},
       {title: "Contraseña", field: "password", editable: "onUpdate"},
       {
         title: "Aportador",

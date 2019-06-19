@@ -7,6 +7,7 @@ import thunk from "redux-thunk";
 import authReducer from "./components/store/reducers/auth";
 import coursesReducer from "./components/store/reducers/courses";
 import usersReducer from "./components/store/reducers/users";
+import userCoursesReducer from "./components/store/reducers/userCourses";
 
 import "./index.css";
 import App from "./App";
@@ -17,7 +18,8 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const rootReducer = combineReducers({
   auth: authReducer,
   courses: coursesReducer,
-  users: usersReducer
+  users: usersReducer,
+  userCourses:  userCoursesReducer
 });
 
 const logger = store => {

@@ -82,11 +82,11 @@ class AuthForm extends Component {
     } else if (
       !this.props.token.administrador &&
       !this.props.token.aportador &&
-      this.props.token.id
+      this.props.token.id != null
     ) {
       authRedirect = <Redirect to="/management" />;
     }
-    
+
     return (
       <form
         onSubmit={this.handleSubmit}

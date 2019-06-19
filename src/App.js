@@ -1,7 +1,9 @@
 import React, {Component} from "react";
 
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import API from "./components/API/api";
+
+import {connect} from "react-redux";
+import * as userCoursesActions from "./components/store/actions/index";
 
 import Layout from "./components/functionals/layout/Layout";
 import Course from "./components/containers/consumer/course/Course";
@@ -20,15 +22,13 @@ const dynamicRouting = courses => {
     return (
       <Route
         key={shortid.generate()}
-        path={`${course.route}`}
+        path={`${course.ruta}`}
         render={routerProps => (
           <div>
             <Course
               {...routerProps}
-              title={course.title}
-              description={course.description}
-              topic={course.topic}
-              link={course.link}
+              title={course.nombre}
+              description={course.descripcion}
             />
           </div>
         )}
@@ -43,13 +43,11 @@ class App extends Component {
   };
 
   componentDidMount() {
-    API.get("/courses").then(response => {
-      this.setState({courses: response.data});
-    });
+    this.props.onGetCourses(this.props.token.id);
   }
 
   render() {
-    const courses = dynamicRouting(this.state.courses);
+    const courses = dynamicRouting(this.props.crs);
 
     return (
       <Router>
@@ -75,4 +73,20 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    token: state.auth.decodedToken,
+    crs: state.userCourses.myCourses
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    onGetCourses: userId => dispatch(userCoursesActions.getUserCourses(userId))
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);

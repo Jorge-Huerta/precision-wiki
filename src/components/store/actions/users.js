@@ -49,12 +49,7 @@ export const updateUsers = (oldData, newData) => {
 
 export const putUsers = (oldData, newData) => {
   return dispatch => {
-    return API.put(`/usuario/${oldData.id}`, {
-      username: newData.username,
-      password: newData.password,
-      aportador: newData.aportador,
-      administrador: newData.administrador
-    })
+    return API.put(`/usuario/${oldData.id}`, newData)
       .then(res => {
         dispatch(updateUsers(oldData, newData));
       })
