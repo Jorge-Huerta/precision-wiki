@@ -21,22 +21,23 @@ export const initUserCourses = () => {
   };
 };
 //get current courses
-export const displayUserCourses = newData => {
-  console.log("esta es", newData);
+export const displayUserCourses = userCourses => {
+  console.log("esta es", userCourses);
   return {
     type: actionTypes.GET_USERCOURSES,
-    newData: newData
+    userCourses: userCourses
   };
 };
 
 export const getUserCourses = userId => {
   return dispatch => {
-    return API.get(`/inscripcion_curso/${userId}`)
+    return API.get(`/usuario_curso/${userId}`)
       .then(res => {
+        console.log("los cursos del user son:", res);
         dispatch(displayUserCourses(res.data));
       })
       .catch(err => {
-        console.log(err);
+        console.log("error en getuser", err);
       });
   };
 };

@@ -34,7 +34,7 @@ const reducer = (state = initialState, action) => {
     case actionTypes.GET_USERCOURSES: {
       return {
         ...state,
-        myCourses: action.courses
+        myCourses: action.userCourses
       };
     }
     default: {

@@ -184,10 +184,10 @@ render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/
 class.columns	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/consumer/management/Management.js	/^  state = {$/;"	property	line:9
 componentDidMount	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/consumer/management/Management.js	/^  componentDidMount() {$/;"	function	line:16
 render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/consumer/management/Management.js	/^  render() {$/;"	function	line:20
-const.courses	/Users/dissonants/Documents/Git/precision-wiki/src/components/store/reducers/userCourses.js	/^const initialState = {$/;"	property	line:3
-switch	/Users/dissonants/Documents/Git/precision-wiki/src/components/store/reducers/userCourses.js	/^  switch (action.type) {$/;"	function	line:23
 class.courses	/Users/dissonants/Documents/Git/precision-wiki/src/App.js	/^  state = {$/;"	property	line:41
 componentDidMount	/Users/dissonants/Documents/Git/precision-wiki/src/App.js	/^  componentDidMount() {$/;"	function	line:45
 render	/Users/dissonants/Documents/Git/precision-wiki/src/App.js	/^  render() {$/;"	function	line:49
-const.id_usuario	/Users/dissonants/Documents/Git/precision-wiki/src/components/store/actions/userCourses.js	/^  const newData = {$/;"	property	line:52
-const.id_curso	/Users/dissonants/Documents/Git/precision-wiki/src/components/store/actions/userCourses.js	/^    id_usuario: userId,$/;"	property	line:53
+const.courses	/Users/dissonants/Documents/Git/precision-wiki/src/components/store/reducers/userCourses.js	/^const initialState = {$/;"	property	line:3
+switch	/Users/dissonants/Documents/Git/precision-wiki/src/components/store/reducers/userCourses.js	/^  switch (action.type) {$/;"	function	line:23
+const.id_usuario	/Users/dissonants/Documents/Git/precision-wiki/src/components/store/actions/userCourses.js	/^  const newData = {$/;"	property	line:53
+const.id_curso	/Users/dissonants/Documents/Git/precision-wiki/src/components/store/actions/userCourses.js	/^    id_usuario: userId,$/;"	property	line:54
