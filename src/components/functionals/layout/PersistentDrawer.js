@@ -1,8 +1,7 @@
-import React, {useState, useEffect, useContext} from "react";
+import React, {useContext} from "react";
 
 import {Link} from "react-router-dom";
 
-import API from "../../API/api";
 import shortid from "shortid";
 
 import classNames from "classnames";
@@ -13,7 +12,6 @@ import ExpandLess from "@material-ui/icons/ExpandLess";
 import ExpandMore from "@material-ui/icons/ExpandMore";
 import Collapse from "@material-ui/core/Collapse";
 import List from "@material-ui/core/List";
-import Divider from "@material-ui/core/Divider";
 import IconButton from "@material-ui/core/IconButton";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
@@ -39,28 +37,20 @@ const getCourses = (courses, classes) => {
         button
         className={classes.nested}
         component={Link}
-        to={`${course.route}`}
+        to={`${course.ruta}`}
       >
         <ListItemIcon>
           <DescriptionIcon />
         </ListItemIcon>
-        <ListItemText inset primary={`${course.title}`} />
+        <ListItemText inset primary={`${course.nombre}`} />
       </ListItem>
     );
   });
 };
 
 const PersistentDrawerLeft = props => {
-  const [data, setData] = useState([]);
   const menuContext = useContext(MenuContext);
   const {classes, theme} = props;
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const res = await API.get("/courses").then(res => setData(res.data));
-    };
-    fetchData();
-  }, []);
 
   return (
     <div className={classes.root}>
@@ -112,14 +102,18 @@ const PersistentDrawerLeft = props => {
           </ListItem>
         ) : null}
 
-        {!props.token.administrador && props.token.aportador ? <ListItem button component={Link} to="/upload">
-          <ListItemIcon>
-            <AttachmentIcon />
-          </ListItemIcon>
-          <ListItemText inset primary="Subir Archivos" />
-        </ListItem> : null}
+        {!props.token.administrador && props.token.aportador ? (
+          <ListItem button component={Link} to="/upload">
+            <ListItemIcon>
+              <AttachmentIcon />
+            </ListItemIcon>
+            <ListItemText inset primary="Subir Archivos" />
+          </ListItem>
+        ) : null}
 
-        {!props.token.administrador && !props.token.aportador && props.token.id ? (
+        {!props.token.administrador &&
+        !props.token.aportador &&
+        props.token.id ? (
           <ListItem button>
             <ListItemIcon>
               <AccountBoxIcon />
@@ -128,7 +122,9 @@ const PersistentDrawerLeft = props => {
           </ListItem>
         ) : null}
 
-        {!props.token.administrador && !props.token.aportador && props.token.id? (
+        {!props.token.administrador &&
+        !props.token.aportador &&
+        props.token.id ? (
           <ListItem button component={Link} to="/management">
             <ListItemIcon>
               <NoteAddIcon />
@@ -137,7 +133,9 @@ const PersistentDrawerLeft = props => {
           </ListItem>
         ) : null}
 
-        {!props.token.administrador && !props.token.aportador && props.token.id ? (
+        {!props.token.administrador &&
+        !props.token.aportador &&
+        props.token.id ? (
           <ListItem button onClick={menuContext.toggleCollapse}>
             <ListItemIcon>
               <DescriptionIcon />
@@ -149,7 +147,7 @@ const PersistentDrawerLeft = props => {
 
         <Collapse in={menuContext.showNested} timeout="auto" unmountOnExit>
           <List component="div" disablePadding>
-            {getCourses(data, classes)}
+            {props.courses !== null ? getCourses(props.courses, classes) : null}
           </List>
         </Collapse>
       </Drawer>

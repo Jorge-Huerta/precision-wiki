@@ -80,12 +80,12 @@ class AuthForm extends Component {
     } else if (this.props.decodedToken.aportador) {
       authRedirect = <Redirect to="/upload" />;
     } else if (
-      !this.props.token.administrador &&
-      !this.props.token.aportador &&
-      this.props.token.id != null
+      !this.props.decodedToken.administrador &&
+      !this.props.decodedToken.aportador &&
+      this.props.decodedToken.id
     ) {
       authRedirect = <Redirect to="/management" />;
-    }
+    } 
 
     return (
       <form

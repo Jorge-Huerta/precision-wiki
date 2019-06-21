@@ -22,7 +22,6 @@ export const initUserCourses = () => {
 };
 //get current courses
 export const displayUserCourses = userCourses => {
-  console.log("esta es", userCourses);
   return {
     type: actionTypes.GET_USERCOURSES,
     userCourses: userCourses
@@ -30,14 +29,15 @@ export const displayUserCourses = userCourses => {
 };
 
 export const getUserCourses = userId => {
+  console.log("userid es", userId);
   return dispatch => {
     return API.get(`/usuario_curso/${userId}`)
       .then(res => {
-        console.log("los cursos del user son:", res);
+        console.log("el id es :", userId);
         dispatch(displayUserCourses(res.data));
       })
       .catch(err => {
-        console.log("error en getuser", err);
+        console.log(err);
       });
   };
 };

@@ -25,11 +25,7 @@ const dynamicRouting = courses => {
         path={`${course.ruta}`}
         render={routerProps => (
           <div>
-            <Course
-              {...routerProps}
-              title={course.nombre}
-              description={course.descripcion}
-            />
+            <Course {...routerProps} data={course} />
           </div>
         )}
       />
@@ -38,12 +34,11 @@ const dynamicRouting = courses => {
 };
 
 class App extends Component {
-  state = {
-    courses: []
-  };
-
-  componentDidMount() {
-    this.props.onGetCourses(this.props.token.id);
+  componentDidUpdate(prevProps) {
+    if (this.props.token !== prevProps.token) {
+      console.log("el token es", this.props.token);
+      this.props.onGetCourses(this.props.token.id);
+    }
   }
 
   render() {

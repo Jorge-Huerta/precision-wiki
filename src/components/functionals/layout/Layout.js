@@ -13,7 +13,7 @@ class Layout extends Component {
       <Aux>
         <MenuProvider>
           <AppBar token={this.props.token} />
-          <Drawer token={this.props.token} />
+          <Drawer token={this.props.token} courses={this.props.crs} />
         </MenuProvider>
       </Aux>
     );
@@ -22,7 +22,8 @@ class Layout extends Component {
 
 const mapStateToProps = state => {
   return {
-    token: state.auth.decodedToken
+    token: state.auth.decodedToken,
+    crs: state.userCourses.myCourses
   };
 };
 
