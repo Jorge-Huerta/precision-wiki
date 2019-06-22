@@ -14,13 +14,17 @@ class Table extends Component {
     ]
   };
 
+  componentDidMount() {
+    this.props.onInitFiles(this.props.data.data.id);
+  }
+
   render() {
     console.log("llegue", this.props.data.data);
     return (
       <MaterialTable
         title="Asociar Link"
         columns={this.state.columns}
-        data={this.props}
+        data={this.props.files}
         parentChildData={(row, rows) =>
           rows.find(topics => topics.id === row.parentId)
         }
@@ -71,16 +75,17 @@ class Table extends Component {
 
 const mapStateToProps = state => {
   return {
-    crs: state.courses.courses
+    files: state.files.files
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    onCourseCreated: newData => dispatch(filesActions.addCourses(newData)),
-    onCourseUpdated: (oldData, newData) =>
-      dispatch(filesActions.putCourses(oldData, newData)),
-    onCourseDelete: oldData => dispatch(filesActions.removeCourses(oldData))
+    onInitFiles: userId => dispatch(filesActions.initFiles(userId)),
+    onFilesCreated: newData => dispatch(filesActions.addFiles(newData)),
+    onFilesUpdated: (oldData, newData) =>
+      dispatch(filesActions.putFiles(oldData, newData)),
+    onFilesDelete: oldData => dispatch(filesActions.removeFiles(oldData))
   };
 };
 

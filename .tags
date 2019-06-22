@@ -190,7 +190,8 @@ const.id_curso	/Users/dissonants/Documents/Git/precision-wiki/src/components/sto
 componentDidUpdate	/Users/dissonants/Documents/Git/precision-wiki/src/App.js	/^  componentDidUpdate(prevProps) {$/;"	function	line:54
 render	/Users/dissonants/Documents/Git/precision-wiki/src/App.js	/^  render() {$/;"	function	line:61
 render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/files/FileManagement.js	/^  render() {$/;"	function	line:8
-class.columns	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/files/Table.js	/^  state = {$/;"	property	line:9
-render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/files/Table.js	/^  render() {$/;"	function	line:17
 const.files	/Users/dissonants/Documents/Git/precision-wiki/src/components/store/reducers/files.js	/^const initialState = {$/;"	property	line:3
 switch	/Users/dissonants/Documents/Git/precision-wiki/src/components/store/reducers/files.js	/^  switch (action.type) {$/;"	function	line:15
+class.columns	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/files/Table.js	/^  state = {$/;"	property	line:9
+componentDidMount	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/files/Table.js	/^  componentDidMount() {$/;"	function	line:17
+render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/files/Table.js	/^  render() {$/;"	function	line:21

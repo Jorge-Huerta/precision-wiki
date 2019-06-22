@@ -7,6 +7,7 @@ import thunk from "redux-thunk";
 import authReducer from "./components/store/reducers/auth";
 import coursesReducer from "./components/store/reducers/courses";
 import usersReducer from "./components/store/reducers/users";
+import filesReducer from "./components/store/reducers/files";
 import userCoursesReducer from "./components/store/reducers/userCourses";
 
 import "./index.css";
@@ -19,6 +20,7 @@ const rootReducer = combineReducers({
   auth: authReducer,
   courses: coursesReducer,
   users: usersReducer,
+  files: filesReducer,
   userCourses: userCoursesReducer
 });
 
