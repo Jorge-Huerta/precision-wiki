@@ -16,13 +16,14 @@ class Table extends Component {
 
   componentDidMount() {
     this.props.onInitFiles(this.props.data.data.id);
+    console.log("los links son:", this.props.files);
   }
 
   render() {
-    console.log("llegue", this.props.data.data);
+    console.log("la id es", this.props.data.data.id);
     return (
       <MaterialTable
-        title="Asociar Link"
+        title={`Asociar link: ${this.props.data.data.nombre}`}
         columns={this.state.columns}
         data={this.props.files}
         parentChildData={(row, rows) =>
@@ -30,19 +31,14 @@ class Table extends Component {
         }
         editable={{
           onRowAdd: newData => {
-            this.setState({courses: [...this.state.courses.topics, newData]});
+            newData.id_usuario = this.props.data.data.id;
+            this.props.onFilesCreated(newData);
           },
           onRowUpdate: (newData, oldData) => {
-            const data = this.state.courses;
-            const index = data.indexOf(oldData);
-            data[index] = newData;
-            this.setState({courses: data});
+            this.props.onFilesUpdated(newData, oldData);
           },
           onRowDelete: oldData => {
-            const data = this.state.courses;
-            const index = data.indexOf(oldData);
-            data.splice(index, 1);
-            this.setState({courses: data});
+            this.props.onFilesDelete(oldData);
           }
         }}
         localization={{
@@ -75,7 +71,8 @@ class Table extends Component {
 
 const mapStateToProps = state => {
   return {
-    files: state.files.files
+    files: state.files.files,
+    token: state.auth.decodedToken
   };
 };
 

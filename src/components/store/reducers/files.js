@@ -3,8 +3,9 @@ import * as actionTypes from "../actions/actionTypes";
 const initialState = {
   files: [
     {
+      id_usuario: "",
       id: "",
-      nombre: "",
+      titulo: "",
       descripcion: "",
       contenido: ""
     }
@@ -37,7 +38,6 @@ const reducer = (state = initialState, action) => {
       const data = [...state.files];
       const index = data.indexOf(action.oldData);
       data.splice(index, 1);
-      console.log("la data es", data);
       return {
         files: data
       };

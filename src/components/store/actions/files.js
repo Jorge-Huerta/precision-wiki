@@ -10,8 +10,9 @@ export const setFiles = files => {
 
 export const initFiles = courseId => {
   return dispatch => {
-    return API.get(`/aporte_del_curso/${courseId}`)
+    return API.get(`/aportes_del_curso/${courseId}`)
       .then(res => {
+        console.log("res.data", res.data);
         dispatch(setFiles(res.data));
       })
       .catch(err => {
@@ -27,9 +28,10 @@ export const createFiles = newData => {
   };
 };
 
-export const addFiles = (courseId, newData) => {
+export const addFiles = newData => {
+  console.log("la nueva data es", newData);
   return dispatch => {
-    return API.post(`/aporte_del_curso/${courseId}`, newData)
+    return API.post("/aporte", newData)
       .then(newData => {
         dispatch(createFiles(newData));
       })
@@ -49,7 +51,7 @@ export const updateFiles = (oldData, newData) => {
 
 export const putFiles = (oldData, newData) => {
   return dispatch => {
-    return API.put(`/aporte_del_curso/${oldData.id}`, {
+    return API.put(`/aporte/${oldData.id}`, {
       nombre: newData.nombre,
       descripcion: newData.descripcion,
       contenido: newData.contenido
@@ -72,7 +74,7 @@ export const deleteFiles = oldData => {
 
 export const removeFiles = oldData => {
   return dispatch => {
-    return API.delete(`/aporte_del_curso/${oldData.id}`)
+    return API.delete(`/aporte/${oldData.id}`)
       .then(res => {
         dispatch(deleteFiles(oldData));
       })
