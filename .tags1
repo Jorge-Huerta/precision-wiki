@@ -4,5 +4,5 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-componentDidUpdate	/Users/dissonants/Documents/Git/precision-wiki/src/App.js	/^  componentDidUpdate(prevProps) {$/;"	function	line:37
-render	/Users/dissonants/Documents/Git/precision-wiki/src/App.js	/^  render() {$/;"	function	line:44
+const.files	/Users/dissonants/Documents/Git/precision-wiki/src/components/store/reducers/files.js	/^const initialState = {$/;"	property	line:3
+switch	/Users/dissonants/Documents/Git/precision-wiki/src/components/store/reducers/files.js	/^  switch (action.type) {$/;"	function	line:15

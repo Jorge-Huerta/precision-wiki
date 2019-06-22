@@ -48,6 +48,25 @@ const getCourses = (courses, classes) => {
   });
 };
 
+const getCoursesAdmin = (courses, classes) => {
+  return courses.map(course => {
+    return (
+      <ListItem
+        key={shortid.generate()}
+        button
+        className={classes.nested}
+        component={Link}
+        to={`${course.ruta}`}
+      >
+        <ListItemIcon>
+          <DescriptionIcon />
+        </ListItemIcon>
+        <ListItemText inset primary={`${course.nombre}`} />
+      </ListItem>
+    );
+  });
+};
+
 const PersistentDrawerLeft = props => {
   const menuContext = useContext(MenuContext);
   const {classes, theme} = props;
@@ -74,7 +93,6 @@ const PersistentDrawerLeft = props => {
             )}
           </IconButton>
         </div>
-
         {props.token.administrador ? (
           <ListItem button component={Link} to="/usermanagement">
             <ListItemIcon>
@@ -83,7 +101,6 @@ const PersistentDrawerLeft = props => {
             <ListItemText inset primary="Gestionar Usuarios" />
           </ListItem>
         ) : null}
-
         {props.token.administrador ? (
           <ListItem button component={Link} to="/coursemanagement">
             <ListItemIcon>
@@ -93,35 +110,16 @@ const PersistentDrawerLeft = props => {
           </ListItem>
         ) : null}
 
-        {props.token.administrador ? (
-          <ListItem button component={Link} to="/filemanagement">
-            <ListItemIcon>
-              <AttachIcon />
-            </ListItemIcon>
-            <ListItemText inset primary="Asociar Archivos" />
-          </ListItem>
-        ) : null}
-
-        {!props.token.administrador && props.token.aportador ? (
-          <ListItem button component={Link} to="/upload">
-            <ListItemIcon>
-              <AttachmentIcon />
-            </ListItemIcon>
-            <ListItemText inset primary="Subir Archivos" />
-          </ListItem>
-        ) : null}
-
         {!props.token.administrador &&
         !props.token.aportador &&
         props.token.id ? (
-          <ListItem button>
+          <ListItem button component={Link} to="/profile">
             <ListItemIcon>
               <AccountBoxIcon />
             </ListItemIcon>
             <ListItemText inset primary="Perfil" />
           </ListItem>
         ) : null}
-
         {!props.token.administrador &&
         !props.token.aportador &&
         props.token.id ? (
@@ -132,7 +130,6 @@ const PersistentDrawerLeft = props => {
             <ListItemText inset primary="Inscribir Curso" />
           </ListItem>
         ) : null}
-
         {!props.token.administrador &&
         !props.token.aportador &&
         props.token.id ? (
@@ -144,12 +141,30 @@ const PersistentDrawerLeft = props => {
             {menuContext.showNested ? <ExpandMore /> : <ExpandLess />}
           </ListItem>
         ) : null}
-
         <Collapse in={menuContext.showNested} timeout="auto" unmountOnExit>
           <List component="div" disablePadding>
             {props.courses !== null ? getCourses(props.courses, classes) : null}
           </List>
         </Collapse>
+
+        {props.token.administrador ? (
+          <ListItem button onClick={menuContext.toggleCollapse}>
+            <ListItemIcon>
+              <DescriptionIcon />
+            </ListItemIcon>
+            <ListItemText inset primary="Asociar Link" />
+            {menuContext.showNested ? <ExpandMore /> : <ExpandLess />}
+          </ListItem>
+        ) : null}
+        {props.token.administrador ? (
+          <Collapse in={menuContext.showNested} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              {props.allCourses !== null
+                ? getCoursesAdmin(props.allCourses, classes)
+                : null}
+            </List>
+          </Collapse>
+        ) : null}
       </Drawer>
 
       <main

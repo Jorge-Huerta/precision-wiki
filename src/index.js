@@ -19,23 +19,12 @@ const rootReducer = combineReducers({
   auth: authReducer,
   courses: coursesReducer,
   users: usersReducer,
-  userCourses:  userCoursesReducer
+  userCourses: userCoursesReducer
 });
-
-const logger = store => {
-  return next => {
-    return action => {
-      console.log("[Middleware] Dispatching", action);
-      const res = next(action);
-      console.log("[Middleware] next state", store.getState());
-      return res;
-    };
-  };
-};
 
 const store = createStore(
   rootReducer,
-  composeEnhancers(applyMiddleware(logger, thunk))
+  composeEnhancers(applyMiddleware(thunk))
 );
 
 ReactDOM.render(

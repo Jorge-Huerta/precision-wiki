@@ -1,70 +1,44 @@
 import React, {Component} from "react";
-import API from "../../../API/api";
+
+import {connect} from "react-redux";
+import * as filesActions from "../../../store/actions/index";
 
 import MaterialTable from "material-table";
 
 class Table extends Component {
   state = {
     columns: [
-      {title: "Título", field: "title"},
-      {title: "Link", field: "description"}
-    ],
-    courses: [{id: "", description: "", title: "", link: "", topics: []}]
+      {title: "Título", field: "titulo"},
+      {title: "Link archivo", field: "descripcion"},
+      {title: "Link video", field: "contenido"}
+    ]
   };
 
-  componentDidMount() {
-    API.get("/courses").then(response => {
-      this.setState({courses: response.data});
-    });
-  }
-
   render() {
+    console.log("llegue", this.props.data.data);
     return (
       <MaterialTable
-        title="Gestión de Cursos"
+        title="Asociar Link"
         columns={this.state.columns}
-        data={this.state.courses}
-        parentChildData={(row, rows) => rows.find(topics => topics.id === row.parentId)}
+        data={this.props}
+        parentChildData={(row, rows) =>
+          rows.find(topics => topics.id === row.parentId)
+        }
         editable={{
           onRowAdd: newData => {
             this.setState({courses: [...this.state.courses.topics, newData]});
-            return API.post("/courses/topics", newData)
-              .then(res => {
-                console.log(res);
-              })
-              .catch(err => {
-                console.log(err);
-              });
           },
           onRowUpdate: (newData, oldData) => {
             const data = this.state.courses;
             const index = data.indexOf(oldData);
             data[index] = newData;
             this.setState({courses: data});
-
-            return API.put(`/courses/courses/${oldData.id}`, {
-              title: newData.title,
-              link: newData.description
-            })
-              .then(res => {
-                console.log(res);
-              })
-              .catch(err => {
-                console.log(err);
-              });
           },
           onRowDelete: oldData => {
             const data = this.state.courses;
             const index = data.indexOf(oldData);
             data.splice(index, 1);
             this.setState({courses: data});
-            return API.delete(`/courses/courses/${oldData.id}`)
-              .then(res => {
-                console.log(res);
-              })
-              .catch(err => {
-                console.log(err);
-              });
           }
         }}
         localization={{
@@ -95,4 +69,22 @@ class Table extends Component {
   }
 }
 
-export default Table;
+const mapStateToProps = state => {
+  return {
+    crs: state.courses.courses
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    onCourseCreated: newData => dispatch(filesActions.addCourses(newData)),
+    onCourseUpdated: (oldData, newData) =>
+      dispatch(filesActions.putCourses(oldData, newData)),
+    onCourseDelete: oldData => dispatch(filesActions.removeCourses(oldData))
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Table);

@@ -7,6 +7,7 @@ import * as userCoursesActions from "./components/store/actions/index";
 
 import Layout from "./components/functionals/layout/Layout";
 import Course from "./components/containers/consumer/course/Course";
+import Profile from "./components/containers/consumer/profile/Profile";
 import Management from "./components/containers/consumer/management/Management";
 import Upload from "./components/containers/upload/Upload";
 import CourseManagement from "./components/containers/admin/courses/CourseManagement";
@@ -33,16 +34,33 @@ const dynamicRouting = courses => {
   });
 };
 
+const dynamicRoutingAdminCourses = courses => {
+  return courses.map(course => {
+    return (
+      <Route
+        key={shortid.generate()}
+        path={`${course.ruta}`}
+        render={routerProps => (
+          <div>
+            <FileManagement {...routerProps} data={course} />
+          </div>
+        )}
+      />
+    );
+  });
+};
+
 class App extends Component {
   componentDidUpdate(prevProps) {
     if (this.props.token !== prevProps.token) {
-      console.log("el token es", this.props.token);
       this.props.onGetCourses(this.props.token.id);
+      this.props.onGetAllCourses();
     }
   }
 
   render() {
     const courses = dynamicRouting(this.props.crs);
+    const allCourses = dynamicRoutingAdminCourses(this.props.allCrs);
 
     return (
       <Router>
@@ -59,8 +77,9 @@ class App extends Component {
             <Route path="/upload" exact component={Upload} />
             <Route path="/auth" exact component={Auth} />
             <Route path="/logout" exact component={Logout} />
-            <Route path="/management" exact component={Management} />
+            <Route path="/profile" exact component={Profile} />
             {courses}
+            {allCourses}
           </Switch>
         </div>
       </Router>
@@ -71,13 +90,15 @@ class App extends Component {
 const mapStateToProps = state => {
   return {
     token: state.auth.decodedToken,
-    crs: state.userCourses.myCourses
+    crs: state.userCourses.myCourses,
+    allCrs: state.courses.courses
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    onGetCourses: userId => dispatch(userCoursesActions.getUserCourses(userId))
+    onGetCourses: userId => dispatch(userCoursesActions.getUserCourses(userId)),
+    onGetAllCourses: () => dispatch(userCoursesActions.initCourses())
   };
 };
 

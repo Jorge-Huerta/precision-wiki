@@ -29,11 +29,9 @@ export const displayUserCourses = userCourses => {
 };
 
 export const getUserCourses = userId => {
-  console.log("userid es", userId);
   return dispatch => {
     return API.get(`/usuario_curso/${userId}`)
       .then(res => {
-        console.log("el id es :", userId);
         dispatch(displayUserCourses(res.data));
       })
       .catch(err => {

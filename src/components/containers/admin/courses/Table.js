@@ -13,10 +13,6 @@ class Table extends Component {
     ]
   };
 
-  componentDidMount() {
-    this.props.onInitCourses();
-  }
-
   render() {
     console.log(this.props.crs);
     return (
@@ -53,7 +49,6 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    onInitCourses: () => dispatch(coursesActions.initCourses()),
     onCourseCreated: newData => dispatch(coursesActions.addCourses(newData)),
     onCourseUpdated: (oldData, newData) =>
       dispatch(coursesActions.putCourses(oldData, newData)),
