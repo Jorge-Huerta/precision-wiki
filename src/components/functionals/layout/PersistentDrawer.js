@@ -20,11 +20,9 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import AccountBoxIcon from "@material-ui/icons/AccountBox";
 import DescriptionIcon from "@material-ui/icons/Description";
-import AttachmentIcon from "@material-ui/icons/Attachment";
 import BookIcon from "@material-ui/icons/Book";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import NoteAddIcon from "@material-ui/icons/NoteAdd";
-import AttachIcon from "@material-ui/icons/AttachFile";
 import styles from "./styles/persistentdrawer-styles";
 
 import MenuContext from "../../context/menu-context";

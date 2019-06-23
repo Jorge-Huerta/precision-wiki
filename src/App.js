@@ -9,7 +9,6 @@ import Layout from "./components/functionals/layout/Layout";
 import Course from "./components/containers/consumer/course/Course";
 import Profile from "./components/containers/consumer/profile/Profile";
 import Management from "./components/containers/consumer/management/Management";
-import Upload from "./components/containers/upload/Upload";
 import CourseManagement from "./components/containers/admin/courses/CourseManagement";
 import UserManagement from "./components/containers/admin/users/UserManagement";
 import FileManagement from "./components/containers/admin/files/FileManagement";
@@ -59,14 +58,19 @@ class App extends Component {
   }
 
   render() {
-    const courses = dynamicRouting(this.props.crs);
-    const allCourses = dynamicRoutingAdminCourses(this.props.allCrs);
+    let courses = "";
+    if (!this.props.token.administrador) {
+      courses = dynamicRouting(this.props.crs);
+    } else {
+      courses = dynamicRoutingAdminCourses(this.props.allCrs);
+    }
 
     return (
       <Router>
         <div>
           <Layout />
           <Switch>
+            <Route path="/auth" exact component={Auth} />
             <Route path="/usermanagement" exact component={UserManagement} />
             <Route
               path="/coursemanagement"
@@ -74,12 +78,12 @@ class App extends Component {
               component={CourseManagement}
             />
             <Route path="/filemanagement" exact component={FileManagement} />
-            <Route path="/upload" exact component={Upload} />
-            <Route path="/auth" exact component={Auth} />
             <Route path="/logout" exact component={Logout} />
             <Route path="/profile" exact component={Profile} />
-            {courses}
-            {allCourses}
+            <Route path="/management" exact component={Management} />
+            {this.props.token.administrador || this.props.token.id
+              ? courses
+              : null}
           </Switch>
         </div>
       </Router>

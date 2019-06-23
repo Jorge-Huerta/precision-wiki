@@ -10,9 +10,8 @@ export const setFiles = files => {
 
 export const initFiles = courseId => {
   return dispatch => {
-    return API.get(`/aportes_del_curso/${courseId}`)
+    return API.get(`/aporte/${courseId}`)
       .then(res => {
-        console.log("res.data", res.data);
         dispatch(setFiles(res.data));
       })
       .catch(err => {
@@ -53,8 +52,8 @@ export const putFiles = (oldData, newData) => {
   return dispatch => {
     return API.put(`/aporte/${oldData.id}`, {
       nombre: newData.nombre,
-      descripcion: newData.descripcion,
-      contenido: newData.contenido
+      link_archivo: newData.link_archivo,
+      link_video: newData.link_video
     })
       .then(res => {
         dispatch(updateFiles(oldData, newData));

@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
 import * as usersActions from "../../../store/actions/index";
-import shortid from "shortid";
 
 import MaterialTable from "material-table";
 import localization from "../../admin/config/localization";

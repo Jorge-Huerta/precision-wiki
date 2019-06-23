@@ -13,6 +13,7 @@ export const initUserCourses = () => {
   return dispatch => {
     return API.get("/curso")
       .then(res => {
+        console.log("los cursos son", res.data)
         dispatch(setUserCourses(res.data));
       })
       .catch(err => {

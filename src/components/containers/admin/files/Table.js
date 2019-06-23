@@ -8,19 +8,17 @@ import MaterialTable from "material-table";
 class Table extends Component {
   state = {
     columns: [
-      {title: "Título", field: "titulo"},
-      {title: "Link archivo", field: "descripcion"},
-      {title: "Link video", field: "contenido"}
+      {title: "Título", field: "nombre"},
+      {title: "Link archivo", field: "link_archivo"},
+      {title: "Link video", field: "link_video"}
     ]
   };
 
   componentDidMount() {
     this.props.onInitFiles(this.props.data.data.id);
-    console.log("los links son:", this.props.files);
   }
 
   render() {
-    console.log("la id es", this.props.data.data.id);
     return (
       <MaterialTable
         title={`Asociar link: ${this.props.data.data.nombre}`}
@@ -31,14 +29,14 @@ class Table extends Component {
         }
         editable={{
           onRowAdd: newData => {
-            newData.id_usuario = this.props.data.data.id;
-            this.props.onFilesCreated(newData);
+            newData.id_curso = this.props.data.data.id;
+            return this.props.onFilesCreated(newData);
           },
           onRowUpdate: (newData, oldData) => {
-            this.props.onFilesUpdated(newData, oldData);
+            return this.props.onFilesUpdated(newData, oldData);
           },
           onRowDelete: oldData => {
-            this.props.onFilesDelete(oldData);
+            return this.props.onFilesDelete(oldData);
           }
         }}
         localization={{

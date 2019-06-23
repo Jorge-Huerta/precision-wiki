@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component} from "react";
 import PropTypes from "prop-types";
 import {withStyles} from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
@@ -18,7 +18,7 @@ function getModalStyle() {
   };
 }
 
-class SimpleModal extends React.Component {
+class SimpleModal extends Component {
   state = {
     open: false
   };
@@ -33,10 +33,10 @@ class SimpleModal extends React.Component {
 
   render() {
     const {classes} = this.props;
-
+    console.log("[CourseModal props]", this.props);
     return (
       <div>
-        <Button onClick={this.handleOpen}>{this.props.topics}</Button>
+        {this.props.data ? (<Button onClick={this.handleOpen}>{this.props.data.nombre}</Button>): null}
         <Modal
           aria-labelledby="simple-modal-title"
           aria-describedby="simple-modal-description"
@@ -45,11 +45,11 @@ class SimpleModal extends React.Component {
         >
           <div style={getModalStyle()} className={classes.paper}>
             <Typography variant="h6" id="modal-title">
-              <ReactPlayer
+              {this.props.data ? (<ReactPlayer
                 controls={true}
-                url={`${this.props.link}`}
+                url={`${this.props.data.link_video}`}
                 playing
-              />
+              />):null}
             </Typography>
             <SimpleModalWrapped />
           </div>

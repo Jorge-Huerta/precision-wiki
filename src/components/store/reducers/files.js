@@ -3,11 +3,10 @@ import * as actionTypes from "../actions/actionTypes";
 const initialState = {
   files: [
     {
-      id_usuario: "",
       id: "",
-      titulo: "",
-      descripcion: "",
-      contenido: ""
+      nombre: "",
+      link_archivo: "",
+      link_video: ""
     }
   ]
 };
