@@ -194,11 +194,11 @@ componentDidMount	/Users/dissonants/Documents/Git/precision-wiki/src/components/
 render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/files/Table.js	/^  render() {$/;"	function	line:21
 componentDidMount	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/consumer/course/Course.js	/^  componentDidMount() {$/;"	function	line:21
 render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/consumer/course/Course.js	/^  render() {$/;"	function	line:25
-getModalStyle	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/consumer/course/CourseModal.js	/^function getModalStyle() {$/;"	function	line:10
-getModalStyle	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/consumer/course/CourseModal.js	/^function getModalStyle() {$/;"	function	line:10
-class.open	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/consumer/course/CourseModal.js	/^  state = {$/;"	property	line:22
-render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/consumer/course/CourseModal.js	/^  render() {$/;"	function	line:34
-SimpleModal.propTypes.classes	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/consumer/course/CourseModal.js	/^SimpleModal.propTypes = {$/;"	property	line:62
 class.columns	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/users/Table.js	/^  state = {$/;"	property	line:10
 componentDidMount	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/users/Table.js	/^  componentDidMount() {$/;"	function	line:23
 render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/users/Table.js	/^  render() {$/;"	function	line:27
+getModalStyle	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/consumer/course/CourseModal.js	/^function getModalStyle() {$/;"	function	line:12
+getModalStyle	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/consumer/course/CourseModal.js	/^function getModalStyle() {$/;"	function	line:12
+class.open	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/consumer/course/CourseModal.js	/^  state = {$/;"	property	line:24
+render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/consumer/course/CourseModal.js	/^  render() {$/;"	function	line:36
+SimpleModal.propTypes.classes	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/consumer/course/CourseModal.js	/^SimpleModal.propTypes = {$/;"	property	line:77

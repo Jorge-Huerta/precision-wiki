@@ -5,6 +5,8 @@ import Typography from "@material-ui/core/Typography";
 import Modal from "@material-ui/core/Modal";
 import Button from "@material-ui/core/Button";
 import ReactPlayer from "react-player";
+import GoogleDocsViewer from "react-google-docs-viewer";
+
 import styles from "./styles/coursemodal-styles";
 
 function getModalStyle() {
@@ -34,9 +36,12 @@ class SimpleModal extends Component {
   render() {
     const {classes} = this.props;
     console.log("[CourseModal props]", this.props);
+
     return (
       <div>
-        {this.props.data ? (<Button onClick={this.handleOpen}>{this.props.data.nombre}</Button>): null}
+        {this.props.data ? (
+          <Button onClick={this.handleOpen}>{this.props.data.nombre}</Button>
+        ) : null}
         <Modal
           aria-labelledby="simple-modal-title"
           aria-describedby="simple-modal-description"
@@ -45,11 +50,21 @@ class SimpleModal extends Component {
         >
           <div style={getModalStyle()} className={classes.paper}>
             <Typography variant="h6" id="modal-title">
-              {this.props.data ? (<ReactPlayer
-                controls={true}
-                url={`${this.props.data.link_video}`}
-                playing
-              />):null}
+              {this.props.data && this.props.data.link_video ? (
+                <ReactPlayer
+                  controls={true}
+                  url={`${this.props.data.link_video}`}
+                  playing
+                />
+              ) : null}
+
+              {this.props.data && this.props.data.link_archivo ? (
+                <GoogleDocsViewer
+                  width="600px"
+                  height="780px"
+                  fileUrl={`${this.props.data.link_archivo}`}
+                />
+              ) : null}
             </Typography>
             <SimpleModalWrapped />
           </div>

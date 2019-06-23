@@ -4,6 +4,8 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-class.columns	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/users/Table.js	/^  state = {$/;"	property	line:10
-componentDidMount	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/users/Table.js	/^  componentDidMount() {$/;"	function	line:23
-render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/users/Table.js	/^  render() {$/;"	function	line:27
+getModalStyle	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/consumer/course/CourseModal.js	/^function getModalStyle() {$/;"	function	line:12
+getModalStyle	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/consumer/course/CourseModal.js	/^function getModalStyle() {$/;"	function	line:12
+class.open	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/consumer/course/CourseModal.js	/^  state = {$/;"	property	line:24
+render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/consumer/course/CourseModal.js	/^  render() {$/;"	function	line:36
+SimpleModal.propTypes.classes	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/consumer/course/CourseModal.js	/^SimpleModal.propTypes = {$/;"	property	line:77
