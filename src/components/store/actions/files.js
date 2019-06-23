@@ -1,6 +1,6 @@
 import * as actionTypes from "./actionTypes";
 import API from "../../API/api";
-
+//set
 export const setFiles = files => {
   return {
     type: actionTypes.SET_FILES,
@@ -20,7 +20,7 @@ export const initFiles = courseId => {
       });
   };
 };
-
+//create
 export const createFiles = newData => {
   return {
     type: actionTypes.CREATE_FILES,
@@ -40,7 +40,7 @@ export const addFiles = newData => {
       });
   };
 };
-
+//update
 export const updateFiles = (oldData, newData) => {
   return {
     type: actionTypes.UPDATE_FILES,
@@ -64,7 +64,7 @@ export const putFiles = (oldData, newData) => {
       });
   };
 };
-
+//delete
 export const deleteFiles = oldData => {
   return {
     type: actionTypes.DELETE_FILES,
