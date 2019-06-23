@@ -13,11 +13,6 @@ class Table extends Component {
       {title: "Nombre", field: "nombre"},
       {title: "Contraseña", field: "password", editable: "onUpdate"},
       {
-        title: "Aportador",
-        field: "aportador",
-        lookup: {true: "Sí", false: "No"}
-      },
-      {
         title: "Administrador",
         field: "administrador",
         lookup: {true: "Sí", false: "No"}
