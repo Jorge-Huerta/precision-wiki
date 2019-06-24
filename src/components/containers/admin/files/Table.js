@@ -34,7 +34,7 @@ class Table extends Component {
             return this.props.onFilesCreated(newData);
           },
           onRowUpdate: (newData, oldData) => {
-            return this.props.onFilesUpdated(newData, oldData);
+            return this.props.onFilesUpdated(oldData, newData);
           },
           onRowDelete: oldData => {
             return this.props.onFilesDelete(oldData);

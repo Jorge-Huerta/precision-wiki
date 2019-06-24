@@ -14,7 +14,6 @@ class Table extends Component {
   };
 
   render() {
-    console.log(this.props.crs);
     return (
       <MaterialTable
         title="Gestión de Cursos"
