@@ -4,6 +4,7 @@ import {connect} from "react-redux";
 import * as userCoursesActions from "../../../store/actions/index";
 
 import MaterialTable from "material-table";
+import localization from "../../admin/config/localization";
 
 class Management extends Component {
   state = {
@@ -32,6 +33,7 @@ class Management extends Component {
             }
           }
         ]}
+        localization={localization}
       />
     );
   }
@@ -48,7 +50,7 @@ const mapDispatchToProps = dispatch => {
   return {
     onInitCourses: () => dispatch(userCoursesActions.initUserCourses()),
     onTakeCourses: (userId, courseId) =>
-      dispatch(userCoursesActions.addUserCourses(userId, courseId)),
+      dispatch(userCoursesActions.addUserCourses(userId, courseId))
   };
 };
 

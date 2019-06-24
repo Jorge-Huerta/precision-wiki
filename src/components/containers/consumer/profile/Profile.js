@@ -12,25 +12,17 @@ class Profile extends Component {
     columns: [
       {title: "Usuario", field: "username"},
       {title: "Nombre", field: "nombre"},
-      {title: "Contraseña", field: "password", editable: "onUpdate"}
+      {title: "Contraseña", field: "password"}
     ],
-    user: [
-      {
-        username: "",
-        nombre: "",
-        password: ""
-      }
-    ]
+    user: [{id: "", username: "", nombre: "", password: ""}]
   };
 
   componentDidMount() {
-    return API.get(`/usuario/${this.props.token.id}`)
-      .then(res =>
-        this.setState({
-          ...this.state,
-          user: res.data
-        });
-        console.log("res es", this.state.user);
+    API.get(`/usuario/${this.props.token.id}`)
+      .then(res => {
+        console.log("la res es ", res.data);
+        this.setState({user: [res.data]});
+        console.log("el user es", this.state.user);
       })
       .catch(err => {
         console.log(err);
@@ -58,6 +50,9 @@ class Profile extends Component {
           }
         }}
         localization={localization}
+        options={{
+          search: false
+        }}
       />
     );
   }
@@ -69,17 +64,4 @@ const mapStateToProps = state => {
   };
 };
 
-const mapDispatchToProps = dispatch => {
-  return {
-    onInitUsers: () => dispatch(usersActions.initUsers()),
-    onUsersCreated: newData => dispatch(usersActions.addUsers(newData)),
-    onUsersUpdated: (oldData, newData) =>
-      dispatch(usersActions.putUsers(oldData, newData)),
-    onUsersDelete: oldData => dispatch(usersActions.removeUsers(oldData))
-  };
-};
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Profile);
+export default connect(mapStateToProps)(Profile);
