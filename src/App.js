@@ -51,7 +51,10 @@ const dynamicRoutingAdminCourses = courses => {
 
 class App extends Component {
   componentDidUpdate(prevProps) {
-    if (this.props.token !== prevProps.token || this.props.crs !== prevProps.crs) {
+    if (
+      this.props.token !== prevProps.token ||
+      this.props.change !== prevProps.change
+    ) {
       this.props.onGetCourses(this.props.token.id);
       this.props.onGetAllCourses();
     }
@@ -95,7 +98,8 @@ const mapStateToProps = state => {
   return {
     token: state.auth.decodedToken,
     crs: state.userCourses.myCourses,
-    allCrs: state.courses.courses
+    allCrs: state.courses.courses,
+    change: state.userCourses.change
   };
 };
 

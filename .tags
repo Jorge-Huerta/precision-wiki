@@ -171,8 +171,6 @@ const.decodedToken	/Users/dissonants/Documents/Git/precision-wiki/src/components
 switch	/Users/dissonants/Documents/Git/precision-wiki/src/components/store/reducers/auth.js	/^  switch (action.type) {$/;"	function	line:47
 class.controls	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/Auth/AuthForm.js	/^  state = {$/;"	property	line:14
 render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/Auth/AuthForm.js	/^  render() {$/;"	function	line:65
-const.courses	/Users/dissonants/Documents/Git/precision-wiki/src/components/store/reducers/userCourses.js	/^const initialState = {$/;"	property	line:3
-switch	/Users/dissonants/Documents/Git/precision-wiki/src/components/store/reducers/userCourses.js	/^  switch (action.type) {$/;"	function	line:23
 render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/files/FileForm.js	/^  render() {$/;"	function	line:5
 render	/Users/dissonants/Documents/Git/precision-wiki/src/components/functionals/layout/Layout.js	/^  render() {$/;"	function	line:11
 class.columns	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/admin/courses/Table.js	/^  state = {$/;"	property	line:9
@@ -202,3 +200,5 @@ componentDidMount	/Users/dissonants/Documents/Git/precision-wiki/src/components/
 render	/Users/dissonants/Documents/Git/precision-wiki/src/components/containers/consumer/profile/Profile.js	/^  render() {$/;"	function	line:40
 componentDidUpdate	/Users/dissonants/Documents/Git/precision-wiki/src/App.js	/^  componentDidUpdate(prevProps) {$/;"	function	line:53
 render	/Users/dissonants/Documents/Git/precision-wiki/src/App.js	/^  render() {$/;"	function	line:60
+const.courses	/Users/dissonants/Documents/Git/precision-wiki/src/components/store/reducers/userCourses.js	/^const initialState = {$/;"	property	line:3
+switch	/Users/dissonants/Documents/Git/precision-wiki/src/components/store/reducers/userCourses.js	/^  switch (action.type) {$/;"	function	line:23

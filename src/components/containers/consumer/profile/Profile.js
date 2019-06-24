@@ -25,7 +25,7 @@ class Profile extends Component {
 
   componentDidMount() {
     return API.get(`/usuario/${this.props.token.id}`)
-      .then(res => {
+      .then(res =>
         this.setState({
           ...this.state,
           user: res.data

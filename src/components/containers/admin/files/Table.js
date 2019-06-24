@@ -4,6 +4,7 @@ import {connect} from "react-redux";
 import * as filesActions from "../../../store/actions/index";
 
 import MaterialTable from "material-table";
+import localization from "../config/localization"
 
 class Table extends Component {
   state = {
@@ -39,29 +40,7 @@ class Table extends Component {
             return this.props.onFilesDelete(oldData);
           }
         }}
-        localization={{
-          toolbar: {
-            searchTooltip: "Buscar",
-            searchPlaceholder: "Buscar..."
-          },
-          header: {
-            actions: "Acciones"
-          },
-          body: {
-            emptyDataSourceMessage: "No hay datos disponibles",
-            filterRow: {
-              filterTooltip: "Filtrar"
-            }
-          },
-          pagination: {
-            labelRowsSelect: "Filas",
-            labelDisplayedRows: " {from}-{to} de {count}",
-            firstTooltip: "Ir al inicio",
-            previousTooltip: "Página anterior",
-            nextTooltip: "Página siguiente",
-            lastTooltip: "Ir al final"
-          }
-        }}
+        localization={localization}
       />
     );
   }

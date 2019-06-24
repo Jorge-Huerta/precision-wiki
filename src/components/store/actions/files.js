@@ -28,7 +28,6 @@ export const createFiles = newData => {
 };
 
 export const addFiles = newData => {
-  console.log("la nueva data es", newData);
   return dispatch => {
     return API.post("/aporte", newData)
       .then(newData => {
@@ -49,12 +48,9 @@ export const updateFiles = (oldData, newData) => {
 };
 
 export const putFiles = (oldData, newData) => {
+  console.log("la nueva data es", newData);
   return dispatch => {
-    return API.put(`/aporte/${oldData.id}`, {
-      nombre: newData.nombre,
-      link_archivo: newData.link_archivo,
-      link_video: newData.link_video
-    })
+    return API.put(`/aporte/${oldData.id}`, newData)
       .then(res => {
         dispatch(updateFiles(oldData, newData));
       })

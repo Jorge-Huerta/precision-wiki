@@ -16,20 +16,34 @@ const initialState = {
       descripcion: "",
       ruta: ""
     }
-  ]
+  ],
+  change: false
 };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.SET_USERCOURSES: {
+      let arrayToFilter = action.courses;
+      let arrayFilter = [...state.myCourses];
+      let filteredCourses = [];
+
+      console.log(arrayToFilter);
+      console.log(arrayFilter);
+      console.log(filteredCourses);
+      filteredCourses = arrayToFilter.filter(item => {
+        console.log("item es", item);
+        return !arrayFilter.includes(item);
+      });
+      console.log(filteredCourses);
       return {
         ...state,
-        courses: action.courses
+        courses: filteredCourses
       };
     }
     case actionTypes.TAKE_USERCOURSES:
       return {
-        ...state
+        ...state,
+        change: !state.change
       };
     case actionTypes.GET_USERCOURSES: {
       return {
