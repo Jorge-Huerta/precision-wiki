@@ -51,7 +51,7 @@ const dynamicRoutingAdminCourses = courses => {
 
 class App extends Component {
   componentDidUpdate(prevProps) {
-    if (this.props.token !== prevProps.token) {
+    if (this.props.token !== prevProps.token || this.props.crs !== prevProps.crs) {
       this.props.onGetCourses(this.props.token.id);
       this.props.onGetAllCourses();
     }

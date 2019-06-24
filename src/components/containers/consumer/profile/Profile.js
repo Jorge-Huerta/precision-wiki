@@ -2,6 +2,8 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import * as usersActions from "../../../store/actions/index";
 
+import API from "../../../API/api";
+
 import MaterialTable from "material-table";
 import localization from "../../admin/config/localization";
 
@@ -11,22 +13,48 @@ class Profile extends Component {
       {title: "Usuario", field: "username"},
       {title: "Nombre", field: "nombre"},
       {title: "Contraseña", field: "password", editable: "onUpdate"}
+    ],
+    user: [
+      {
+        username: "",
+        nombre: "",
+        password: ""
+      }
     ]
   };
 
   componentDidMount() {
-    this.props.onInitUsers();
+    return API.get(`/usuario/${this.props.token.id}`)
+      .then(res => {
+        this.setState({
+          ...this.state,
+          user: res.data
+        });
+        console.log("res es", this.state.user);
+      })
+      .catch(err => {
+        console.log(err);
+      });
   }
 
   render() {
     return (
       <MaterialTable
-        title="Gestión de Usuarios"
+        title="Perfil"
         columns={this.state.columns}
-        data={this.props.usr}
+        data={this.state.user}
         editable={{
           onRowUpdate: (newData, oldData) => {
-            return this.props.onUsersUpdated(oldData, newData);
+            return API.put(`/usuario/${oldData.id}`, newData)
+              .then(res => {
+                const data = [...this.state.user];
+                const index = data.indexOf(oldData);
+                data[index] = newData;
+                this.setState({user: data});
+              })
+              .catch(err => {
+                console.log(err);
+              });
           }
         }}
         localization={localization}
@@ -37,7 +65,7 @@ class Profile extends Component {
 
 const mapStateToProps = state => {
   return {
-    usr: state.users.users
+    token: state.auth.decodedToken
   };
 };
 
